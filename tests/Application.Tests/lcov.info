@@ -1,0 +1,1771 @@
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/BaseEntity.cs
+FN:7,System.Guid TuiSecretary.Domain.Entities.BaseEntity::get_Id()
+FNDA:5,System.Guid TuiSecretary.Domain.Entities.BaseEntity::get_Id()
+DA:8,5
+FN:9,System.DateTime TuiSecretary.Domain.Entities.BaseEntity::get_CreatedAt()
+FNDA:5,System.DateTime TuiSecretary.Domain.Entities.BaseEntity::get_CreatedAt()
+DA:10,5
+FN:11,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.BaseEntity::get_UpdatedAt()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.BaseEntity::get_UpdatedAt()
+DA:12,0
+FN:14,System.Void TuiSecretary.Domain.Entities.BaseEntity::SetUpdatedAt()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.BaseEntity::SetUpdatedAt()
+DA:15,0
+DA:16,0
+DA:17,0
+LF:6
+LH:2
+BRF:0
+BRH:0
+FNF:4
+FNH:2
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/CalendarEvent.cs
+FN:8,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Title()
+FNDA:0,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Title()
+DA:9,0
+FN:11,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Description()
+FNDA:0,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Description()
+DA:12,0
+FN:13,System.DateTime TuiSecretary.Domain.Entities.CalendarEvent::get_StartDateTime()
+FNDA:0,System.DateTime TuiSecretary.Domain.Entities.CalendarEvent::get_StartDateTime()
+DA:14,0
+FN:15,System.DateTime TuiSecretary.Domain.Entities.CalendarEvent::get_EndDateTime()
+FNDA:0,System.DateTime TuiSecretary.Domain.Entities.CalendarEvent::get_EndDateTime()
+DA:16,0
+FN:17,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::get_IsAllDay()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::get_IsAllDay()
+DA:18,0
+FN:19,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Location()
+FNDA:0,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Location()
+DA:20,0
+FN:21,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Color()
+FNDA:0,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_Color()
+DA:22,0
+FN:23,System.Collections.Generic.List`1<System.String> TuiSecretary.Domain.Entities.CalendarEvent::get_Attendees()
+FNDA:0,System.Collections.Generic.List`1<System.String> TuiSecretary.Domain.Entities.CalendarEvent::get_Attendees()
+DA:24,0
+FN:25,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::get_IsRecurring()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::get_IsRecurring()
+DA:26,0
+FN:27,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_RecurrencePattern()
+FNDA:0,System.String TuiSecretary.Domain.Entities.CalendarEvent::get_RecurrencePattern()
+DA:28,0
+FN:51,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateTitle(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateTitle(System.String)
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+BRDA:53,4,0,0
+BRDA:53,4,1,0
+FN:57,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateDescription(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateDescription(System.String)
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+BRDA:59,4,0,0
+BRDA:59,4,1,0
+FN:63,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateLocation(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateLocation(System.String)
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+BRDA:65,4,0,0
+BRDA:65,4,1,0
+FN:69,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateColor(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateColor(System.String)
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+BRDA:71,4,0,0
+BRDA:71,4,1,0
+FN:75,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateDateTime(System.DateTime,System.DateTime)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::UpdateDateTime(System.DateTime,System.DateTime)
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+BRDA:77,10,0,0
+BRDA:77,10,1,0
+FN:87,System.Void TuiSecretary.Domain.Entities.CalendarEvent::SetAllDay(System.Boolean)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::SetAllDay(System.Boolean)
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+FN:93,System.Void TuiSecretary.Domain.Entities.CalendarEvent::AddAttendee(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::AddAttendee(System.String)
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+BRDA:95,7,0,0
+BRDA:95,7,1,0
+BRDA:95,29,0,0
+BRDA:95,29,1,0
+FN:102,System.Void TuiSecretary.Domain.Entities.CalendarEvent::RemoveAttendee(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::RemoveAttendee(System.String)
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+BRDA:104,15,0,0
+BRDA:104,15,1,0
+FN:110,System.Void TuiSecretary.Domain.Entities.CalendarEvent::SetRecurrence(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::SetRecurrence(System.String)
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+BRDA:112,4,0,0
+BRDA:112,4,1,0
+FN:116,System.TimeSpan TuiSecretary.Domain.Entities.CalendarEvent::get_Duration()
+FNDA:0,System.TimeSpan TuiSecretary.Domain.Entities.CalendarEvent::get_Duration()
+DA:117,0
+FN:119,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::IsOnDate(System.DateTime)
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::IsOnDate(System.DateTime)
+DA:120,0
+DA:121,0
+DA:122,0
+BRDA:121,27,0,0
+BRDA:121,27,1,0
+FN:124,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::IsInTimeRange(System.DateTime,System.DateTime)
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.CalendarEvent::IsInTimeRange(System.DateTime,System.DateTime)
+DA:125,0
+DA:126,0
+DA:127,0
+BRDA:126,13,0,0
+BRDA:126,13,1,0
+FN:29,System.Void TuiSecretary.Domain.Entities.CalendarEvent::.ctor()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::.ctor()
+DA:30,0
+FN:31,System.Void TuiSecretary.Domain.Entities.CalendarEvent::.ctor(System.String,System.DateTime,System.DateTime,System.Boolean,System.String,System.String,System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.CalendarEvent::.ctor(System.String,System.DateTime,System.DateTime,System.Boolean,System.String,System.String,System.String)
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+BRDA:35,77,0,0
+BRDA:35,77,1,0
+BRDA:36,101,0,0
+BRDA:36,101,1,0
+BRDA:37,119,0,0
+BRDA:37,119,1,0
+BRDA:38,137,0,0
+BRDA:38,137,1,0
+BRDA:41,169,0,0
+BRDA:41,169,1,0
+LF:79
+LH:0
+BRF:32
+BRH:0
+FNF:24
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/Note.cs
+FN:8,System.String TuiSecretary.Domain.Entities.Note::get_Title()
+FNDA:13,System.String TuiSecretary.Domain.Entities.Note::get_Title()
+DA:9,13
+FN:11,System.String TuiSecretary.Domain.Entities.Note::get_Content()
+FNDA:13,System.String TuiSecretary.Domain.Entities.Note::get_Content()
+DA:12,13
+FN:13,System.Collections.Generic.List`1<System.String> TuiSecretary.Domain.Entities.Note::get_Tags()
+FNDA:10,System.Collections.Generic.List`1<System.String> TuiSecretary.Domain.Entities.Note::get_Tags()
+DA:14,10
+FN:15,System.Boolean TuiSecretary.Domain.Entities.Note::get_IsFavorite()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.Note::get_IsFavorite()
+DA:16,0
+FN:27,System.Void TuiSecretary.Domain.Entities.Note::UpdateTitle(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.Note::UpdateTitle(System.String)
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+BRDA:29,4,0,0
+BRDA:29,4,1,0
+FN:33,System.Void TuiSecretary.Domain.Entities.Note::UpdateContent(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.Note::UpdateContent(System.String)
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+BRDA:35,4,0,0
+BRDA:35,4,1,0
+FN:39,System.Void TuiSecretary.Domain.Entities.Note::AddTag(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.Note::AddTag(System.String)
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+BRDA:41,7,0,0
+BRDA:41,7,1,0
+BRDA:41,29,0,0
+BRDA:41,29,1,0
+FN:48,System.Void TuiSecretary.Domain.Entities.Note::RemoveTag(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.Note::RemoveTag(System.String)
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+BRDA:50,15,0,0
+BRDA:50,15,1,0
+FN:56,System.Void TuiSecretary.Domain.Entities.Note::ToggleFavorite()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.Note::ToggleFavorite()
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+FN:17,System.Void TuiSecretary.Domain.Entities.Note::.ctor()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.Note::.ctor()
+DA:18,0
+FN:19,System.Void TuiSecretary.Domain.Entities.Note::.ctor(System.String,System.String,System.Collections.Generic.List`1<System.String>)
+FNDA:5,System.Void TuiSecretary.Domain.Entities.Note::.ctor(System.String,System.String,System.Collections.Generic.List`1<System.String>)
+DA:20,5
+DA:21,5
+DA:22,5
+DA:23,5
+DA:24,5
+DA:25,5
+BRDA:22,44,0,0
+BRDA:22,44,1,5
+BRDA:23,67,0,0
+BRDA:23,67,1,5
+BRDA:24,84,0,5
+BRDA:24,84,1,5
+LF:36
+LH:9
+BRF:16
+BRH:4
+FNF:11
+FNH:4
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/Task.cs
+FN:9,System.String TuiSecretary.Domain.Entities.WorkTask::get_Title()
+FNDA:0,System.String TuiSecretary.Domain.Entities.WorkTask::get_Title()
+DA:10,0
+FN:12,System.String TuiSecretary.Domain.Entities.WorkTask::get_Description()
+FNDA:0,System.String TuiSecretary.Domain.Entities.WorkTask::get_Description()
+DA:13,0
+FN:14,TuiSecretary.Domain.Enums.TaskStatus TuiSecretary.Domain.Entities.WorkTask::get_Status()
+FNDA:0,TuiSecretary.Domain.Enums.TaskStatus TuiSecretary.Domain.Entities.WorkTask::get_Status()
+DA:15,0
+FN:16,TuiSecretary.Domain.Enums.Priority TuiSecretary.Domain.Entities.WorkTask::get_Priority()
+FNDA:0,TuiSecretary.Domain.Enums.Priority TuiSecretary.Domain.Entities.WorkTask::get_Priority()
+DA:17,0
+FN:18,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.WorkTask::get_StartDate()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.WorkTask::get_StartDate()
+DA:19,0
+FN:20,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.WorkTask::get_DueDate()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.WorkTask::get_DueDate()
+DA:21,0
+FN:22,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.WorkTask::get_CompletedAt()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.WorkTask::get_CompletedAt()
+DA:23,0
+FN:24,System.TimeSpan TuiSecretary.Domain.Entities.WorkTask::get_EstimatedDuration()
+FNDA:0,System.TimeSpan TuiSecretary.Domain.Entities.WorkTask::get_EstimatedDuration()
+DA:25,0
+FN:26,System.TimeSpan TuiSecretary.Domain.Entities.WorkTask::get_ActualDuration()
+FNDA:0,System.TimeSpan TuiSecretary.Domain.Entities.WorkTask::get_ActualDuration()
+DA:27,0
+FN:28,System.Collections.Generic.List`1<System.String> TuiSecretary.Domain.Entities.WorkTask::get_Tags()
+FNDA:0,System.Collections.Generic.List`1<System.String> TuiSecretary.Domain.Entities.WorkTask::get_Tags()
+DA:29,0
+FN:31,System.Collections.Generic.IReadOnlyList`1<TuiSecretary.Domain.Entities.TaskTimer> TuiSecretary.Domain.Entities.WorkTask::get_Timers()
+FNDA:0,System.Collections.Generic.IReadOnlyList`1<TuiSecretary.Domain.Entities.TaskTimer> TuiSecretary.Domain.Entities.WorkTask::get_Timers()
+DA:32,0
+FN:48,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateTitle(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateTitle(System.String)
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+BRDA:50,4,0,0
+BRDA:50,4,1,0
+FN:54,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateDescription(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateDescription(System.String)
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+BRDA:56,4,0,0
+BRDA:56,4,1,0
+FN:60,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateStatus(TuiSecretary.Domain.Enums.TaskStatus)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateStatus(TuiSecretary.Domain.Enums.TaskStatus)
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+BRDA:63,15,0,0
+BRDA:63,15,1,0
+BRDA:67,54,0,0
+BRDA:67,54,1,0
+FN:74,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdatePriority(TuiSecretary.Domain.Enums.Priority)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdatePriority(TuiSecretary.Domain.Enums.Priority)
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+FN:80,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateDates(System.Nullable`1<System.DateTime>,System.Nullable`1<System.DateTime>)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateDates(System.Nullable`1<System.DateTime>,System.Nullable`1<System.DateTime>)
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+FN:87,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateEstimatedDuration(System.TimeSpan)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::UpdateEstimatedDuration(System.TimeSpan)
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+FN:93,TuiSecretary.Domain.Entities.TaskTimer TuiSecretary.Domain.Entities.WorkTask::StartTimer()
+FNDA:0,TuiSecretary.Domain.Entities.TaskTimer TuiSecretary.Domain.Entities.WorkTask::StartTimer()
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:101,0
+DA:102,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:109,0
+DA:110,0
+BRDA:96,50,0,0
+BRDA:96,50,1,0
+BRDA:104,94,0,0
+BRDA:104,94,1,0
+FN:112,System.Void TuiSecretary.Domain.Entities.WorkTask::StopActiveTimer()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::StopActiveTimer()
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+BRDA:115,50,0,0
+BRDA:115,50,1,0
+FN:123,System.Void TuiSecretary.Domain.Entities.WorkTask::AddTag(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::AddTag(System.String)
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+BRDA:125,7,0,0
+BRDA:125,7,1,0
+BRDA:125,29,0,0
+BRDA:125,29,1,0
+FN:132,System.Void TuiSecretary.Domain.Entities.WorkTask::RemoveTag(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::RemoveTag(System.String)
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+BRDA:134,15,0,0
+BRDA:134,15,1,0
+FN:140,System.Void TuiSecretary.Domain.Entities.WorkTask::CalculateActualDuration()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::CalculateActualDuration()
+DA:141,0
+DA:142,0
+DA:143,0
+FN:144,System.Boolean TuiSecretary.Domain.Entities.WorkTask::get_IsOverdue()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.WorkTask::get_IsOverdue()
+DA:145,0
+BRDA:145,14,0,0
+BRDA:145,56,0,0
+BRDA:145,14,1,0
+BRDA:145,56,1,0
+FN:146,System.Boolean TuiSecretary.Domain.Entities.WorkTask::get_HasActiveTimer()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.WorkTask::get_HasActiveTimer()
+DA:147,0
+FN:30,System.Void TuiSecretary.Domain.Entities.WorkTask::.ctor()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::.ctor()
+DA:31,0
+DA:34,0
+FN:35,System.Void TuiSecretary.Domain.Entities.WorkTask::.ctor(System.String,System.String,TuiSecretary.Domain.Enums.Priority,System.Nullable`1<System.DateTime>,System.Nullable`1<System.DateTime>,System.Nullable`1<System.TimeSpan>)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.WorkTask::.ctor(System.String,System.String,TuiSecretary.Domain.Enums.Priority,System.Nullable`1<System.DateTime>,System.Nullable`1<System.DateTime>,System.Nullable`1<System.TimeSpan>)
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+BRDA:39,69,0,0
+BRDA:39,69,1,0
+BRDA:40,92,0,0
+BRDA:40,92,1,0
+BRDA:44,143,0,0
+BRDA:44,143,1,0
+LF:97
+LH:0
+BRF:30
+BRH:0
+FNF:26
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/TaskTimer.cs
+FN:4,System.DateTime TuiSecretary.Domain.Entities.TaskTimer::get_StartTime()
+FNDA:0,System.DateTime TuiSecretary.Domain.Entities.TaskTimer::get_StartTime()
+DA:5,0
+FN:6,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.TaskTimer::get_EndTime()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.TaskTimer::get_EndTime()
+DA:7,0
+FN:8,System.String TuiSecretary.Domain.Entities.TaskTimer::get_Notes()
+FNDA:0,System.String TuiSecretary.Domain.Entities.TaskTimer::get_Notes()
+DA:9,0
+FN:16,System.Void TuiSecretary.Domain.Entities.TaskTimer::Stop(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TaskTimer::Stop(System.String)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+BRDA:18,17,0,0
+BRDA:18,17,1,0
+BRDA:24,51,0,0
+BRDA:24,51,1,0
+FN:28,System.Void TuiSecretary.Domain.Entities.TaskTimer::UpdateNotes(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TaskTimer::UpdateNotes(System.String)
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+BRDA:30,4,0,0
+BRDA:30,4,1,0
+FN:33,System.TimeSpan TuiSecretary.Domain.Entities.TaskTimer::get_Duration()
+FNDA:0,System.TimeSpan TuiSecretary.Domain.Entities.TaskTimer::get_Duration()
+DA:34,0
+BRDA:34,15,0,0
+BRDA:34,15,1,0
+FN:35,System.Boolean TuiSecretary.Domain.Entities.TaskTimer::get_IsRunning()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.TaskTimer::get_IsRunning()
+DA:36,0
+FN:10,System.Void TuiSecretary.Domain.Entities.TaskTimer::.ctor()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TaskTimer::.ctor()
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+LF:21
+LH:0
+BRF:8
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/TodoItem.cs
+FN:9,System.String TuiSecretary.Domain.Entities.TodoItem::get_Title()
+FNDA:0,System.String TuiSecretary.Domain.Entities.TodoItem::get_Title()
+DA:10,0
+FN:12,System.String TuiSecretary.Domain.Entities.TodoItem::get_Description()
+FNDA:0,System.String TuiSecretary.Domain.Entities.TodoItem::get_Description()
+DA:13,0
+FN:14,System.Boolean TuiSecretary.Domain.Entities.TodoItem::get_IsCompleted()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.TodoItem::get_IsCompleted()
+DA:15,0
+FN:16,TuiSecretary.Domain.Enums.Priority TuiSecretary.Domain.Entities.TodoItem::get_Priority()
+FNDA:0,TuiSecretary.Domain.Enums.Priority TuiSecretary.Domain.Entities.TodoItem::get_Priority()
+DA:17,0
+FN:18,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.TodoItem::get_DueDate()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.TodoItem::get_DueDate()
+DA:19,0
+FN:20,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.TodoItem::get_CompletedAt()
+FNDA:0,System.Nullable`1<System.DateTime> TuiSecretary.Domain.Entities.TodoItem::get_CompletedAt()
+DA:21,0
+FN:33,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdateTitle(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdateTitle(System.String)
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+BRDA:35,4,0,0
+BRDA:35,4,1,0
+FN:39,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdateDescription(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdateDescription(System.String)
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+BRDA:41,4,0,0
+BRDA:41,4,1,0
+FN:45,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdatePriority(TuiSecretary.Domain.Enums.Priority)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdatePriority(TuiSecretary.Domain.Enums.Priority)
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+FN:51,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdateDueDate(System.Nullable`1<System.DateTime>)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::UpdateDueDate(System.Nullable`1<System.DateTime>)
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+FN:57,System.Void TuiSecretary.Domain.Entities.TodoItem::MarkAsCompleted()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::MarkAsCompleted()
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+BRDA:59,12,0,0
+BRDA:59,12,1,0
+FN:67,System.Void TuiSecretary.Domain.Entities.TodoItem::MarkAsIncomplete()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::MarkAsIncomplete()
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+BRDA:69,9,0,0
+BRDA:69,9,1,0
+FN:76,System.Boolean TuiSecretary.Domain.Entities.TodoItem::get_IsOverdue()
+FNDA:0,System.Boolean TuiSecretary.Domain.Entities.TodoItem::get_IsOverdue()
+DA:77,0
+BRDA:77,14,0,0
+BRDA:77,56,0,0
+BRDA:77,14,1,0
+BRDA:77,56,1,0
+FN:22,System.Void TuiSecretary.Domain.Entities.TodoItem::.ctor()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::.ctor()
+DA:23,0
+FN:24,System.Void TuiSecretary.Domain.Entities.TodoItem::.ctor(System.String,System.String,TuiSecretary.Domain.Enums.Priority,System.Nullable`1<System.DateTime>)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoItem::.ctor(System.String,System.String,TuiSecretary.Domain.Enums.Priority,System.Nullable`1<System.DateTime>)
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+BRDA:27,40,0,0
+BRDA:27,40,1,0
+BRDA:28,63,0,0
+BRDA:28,63,1,0
+LF:47
+LH:0
+BRF:16
+BRH:0
+FNF:15
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Domain/Entities/TodoList.cs
+FN:8,System.String TuiSecretary.Domain.Entities.TodoList::get_Name()
+FNDA:0,System.String TuiSecretary.Domain.Entities.TodoList::get_Name()
+DA:9,0
+FN:11,System.String TuiSecretary.Domain.Entities.TodoList::get_Description()
+FNDA:0,System.String TuiSecretary.Domain.Entities.TodoList::get_Description()
+DA:12,0
+FN:13,System.String TuiSecretary.Domain.Entities.TodoList::get_Color()
+FNDA:0,System.String TuiSecretary.Domain.Entities.TodoList::get_Color()
+DA:14,0
+FN:16,System.Collections.Generic.IReadOnlyList`1<TuiSecretary.Domain.Entities.TodoItem> TuiSecretary.Domain.Entities.TodoList::get_Items()
+FNDA:0,System.Collections.Generic.IReadOnlyList`1<TuiSecretary.Domain.Entities.TodoItem> TuiSecretary.Domain.Entities.TodoList::get_Items()
+DA:17,0
+FN:28,System.Void TuiSecretary.Domain.Entities.TodoList::UpdateName(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoList::UpdateName(System.String)
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+BRDA:30,4,0,0
+BRDA:30,4,1,0
+FN:34,System.Void TuiSecretary.Domain.Entities.TodoList::UpdateDescription(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoList::UpdateDescription(System.String)
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+BRDA:36,4,0,0
+BRDA:36,4,1,0
+FN:40,System.Void TuiSecretary.Domain.Entities.TodoList::UpdateColor(System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoList::UpdateColor(System.String)
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+BRDA:42,4,0,0
+BRDA:42,4,1,0
+FN:46,TuiSecretary.Domain.Entities.TodoItem TuiSecretary.Domain.Entities.TodoList::AddItem(System.String,System.String)
+FNDA:0,TuiSecretary.Domain.Entities.TodoItem TuiSecretary.Domain.Entities.TodoList::AddItem(System.String,System.String)
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+FN:54,System.Void TuiSecretary.Domain.Entities.TodoList::RemoveItem(System.Guid)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoList::RemoveItem(System.Guid)
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+BRDA:57,44,0,0
+BRDA:57,44,1,0
+FN:63,System.Int32 TuiSecretary.Domain.Entities.TodoList::get_CompletedItemsCount()
+FNDA:0,System.Int32 TuiSecretary.Domain.Entities.TodoList::get_CompletedItemsCount()
+DA:64,0
+FN:64,System.Int32 TuiSecretary.Domain.Entities.TodoList::get_TotalItemsCount()
+FNDA:0,System.Int32 TuiSecretary.Domain.Entities.TodoList::get_TotalItemsCount()
+DA:65,0
+FN:65,System.Double TuiSecretary.Domain.Entities.TodoList::get_CompletionPercentage()
+FNDA:0,System.Double TuiSecretary.Domain.Entities.TodoList::get_CompletionPercentage()
+DA:66,0
+BRDA:66,6,0,0
+BRDA:66,6,1,0
+FN:15,System.Void TuiSecretary.Domain.Entities.TodoList::.ctor()
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoList::.ctor()
+DA:16,0
+DA:19,0
+FN:20,System.Void TuiSecretary.Domain.Entities.TodoList::.ctor(System.String,System.String,System.String)
+FNDA:0,System.Void TuiSecretary.Domain.Entities.TodoList::.ctor(System.String,System.String,System.String)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+BRDA:23,55,0,0
+BRDA:23,55,1,0
+BRDA:24,78,0,0
+BRDA:24,78,1,0
+BRDA:25,95,0,0
+BRDA:25,95,1,0
+LF:41
+LH:0
+BRF:16
+BRH:0
+FNF:14
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/obj/Debug/net8.0/Mediator.SourceGenerator/Mediator.SourceGenerator.IncrementalMediatorGenerator/Mediator.g.cs
+FN:28,Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.MediatorDependencyInjectionExtensions::AddMediator(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.MediatorDependencyInjectionExtensions::AddMediator(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:29,0
+DA:30,0
+DA:31,0
+FN:36,Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.MediatorDependencyInjectionExtensions::AddMediator(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action`1<Mediator.MediatorOptions>)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.MediatorDependencyInjectionExtensions::AddMediator(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action`1<Mediator.MediatorOptions>)
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:69,0
+DA:70,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:77,0
+DA:79,0
+BRDA:39,13,0,0
+BRDA:39,13,1,0
+BRDA:43,31,0,0
+BRDA:43,31,1,0
+BRDA:43,42,0,0
+BRDA:43,42,1,0
+FN:737,Mediator.ForeachAwaitPublisher Mediator.Mediator::get_NotificationPublisher()
+FNDA:0,Mediator.ForeachAwaitPublisher Mediator.Mediator::get_NotificationPublisher()
+DA:738,0
+DA:739,0
+DA:740,0
+DA:741,0
+DA:742,0
+BRDA:739,12,0,0
+BRDA:739,12,1,0
+FN:748,System.Boolean Mediator.Mediator::get_ServicesUnderlyingTypeIsArray()
+FNDA:0,System.Boolean Mediator.Mediator::get_ServicesUnderlyingTypeIsArray()
+DA:749,0
+DA:750,0
+DA:751,0
+DA:752,0
+DA:753,0
+BRDA:750,17,0,0
+BRDA:750,17,1,0
+FN:854,System.Threading.Tasks.ValueTask`1<TuiSecretary.Domain.Entities.Note> Mediator.Mediator::Send(TuiSecretary.Application.Commands.Notes.CreateNoteCommand,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TuiSecretary.Domain.Entities.Note> Mediator.Mediator::Send(TuiSecretary.Application.Commands.Notes.CreateNoteCommand,System.Threading.CancellationToken)
+DA:855,0
+DA:856,0
+DA:857,0
+DA:858,0
+FN:870,System.Threading.Tasks.ValueTask`1<System.Collections.Generic.IEnumerable`1<TuiSecretary.Domain.Entities.Note>> Mediator.Mediator::Send(TuiSecretary.Application.Queries.Notes.GetAllNotesQuery,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<System.Collections.Generic.IEnumerable`1<TuiSecretary.Domain.Entities.Note>> Mediator.Mediator::Send(TuiSecretary.Application.Queries.Notes.GetAllNotesQuery,System.Threading.CancellationToken)
+DA:871,0
+DA:872,0
+DA:873,0
+DA:874,0
+FN:886,System.Threading.Tasks.ValueTask`1<TuiSecretary.Domain.Entities.Note> Mediator.Mediator::Send(TuiSecretary.Application.Queries.Notes.GetNoteByIdQuery,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TuiSecretary.Domain.Entities.Note> Mediator.Mediator::Send(TuiSecretary.Application.Queries.Notes.GetNoteByIdQuery,System.Threading.CancellationToken)
+DA:887,0
+DA:888,0
+DA:889,0
+DA:890,0
+FN:904,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Mediator::Send(Mediator.IRequest`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Mediator::Send(Mediator.IRequest`1<TResponse>,System.Threading.CancellationToken)
+DA:905,0
+DA:906,0
+DA:907,0
+DA:908,0
+FN:931,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Mediator::CreateStream(Mediator.IStreamRequest`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Mediator::CreateStream(Mediator.IStreamRequest`1<TResponse>,System.Threading.CancellationToken)
+DA:932,0
+DA:933,0
+DA:934,0
+DA:935,0
+FN:949,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Mediator::Send(Mediator.ICommand`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Mediator::Send(Mediator.ICommand`1<TResponse>,System.Threading.CancellationToken)
+DA:950,0
+DA:951,0
+DA:954,0
+DA:955,0
+DA:956,0
+DA:957,0
+DA:958,0
+DA:960,0
+DA:963,0
+DA:964,0
+DA:965,0
+DA:968,0
+BRDA:951,13,1,0
+BRDA:955,47,0,0
+BRDA:955,47,1,0
+BRDA:951,13,0,0
+FN:1002,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Mediator::CreateStream(Mediator.IStreamCommand`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Mediator::CreateStream(Mediator.IStreamCommand`1<TResponse>,System.Threading.CancellationToken)
+DA:1003,0
+DA:1004,0
+DA:1005,0
+DA:1006,0
+FN:1020,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Mediator::Send(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Mediator::Send(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)
+DA:1021,0
+DA:1022,0
+DA:1025,0
+DA:1026,0
+DA:1027,0
+DA:1028,0
+DA:1029,0
+DA:1031,0
+DA:1034,0
+DA:1035,0
+DA:1036,0
+DA:1037,0
+DA:1038,0
+DA:1040,0
+DA:1043,0
+DA:1044,0
+DA:1045,0
+DA:1048,0
+BRDA:1022,13,0,0
+BRDA:1022,13,1,0
+BRDA:1026,62,0,0
+BRDA:1026,62,1,0
+BRDA:1022,23,1,0
+BRDA:1035,135,0,0
+BRDA:1035,135,1,0
+BRDA:1022,23,0,0
+FN:1087,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Mediator::CreateStream(Mediator.IStreamQuery`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Mediator::CreateStream(Mediator.IStreamQuery`1<TResponse>,System.Threading.CancellationToken)
+DA:1088,0
+DA:1089,0
+DA:1090,0
+DA:1091,0
+FN:1157,System.Collections.Generic.IAsyncEnumerable`1<System.Object> Mediator.Mediator::CreateStream(System.Object,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<System.Object> Mediator.Mediator::CreateStream(System.Object,System.Threading.CancellationToken)
+DA:1158,0
+DA:1159,0
+DA:1160,0
+DA:1161,0
+FN:1176,System.Threading.Tasks.ValueTask Mediator.Mediator::Publish(System.Object,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask Mediator.Mediator::Publish(System.Object,System.Threading.CancellationToken)
+DA:1177,0
+DA:1178,0
+DA:1179,0
+DA:1180,0
+FN:1195,System.Threading.Tasks.ValueTask Mediator.Mediator::Publish(TNotification,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask Mediator.Mediator::Publish(TNotification,System.Threading.CancellationToken)
+DA:1196,0
+DA:1197,0
+DA:1198,0
+DA:1199,0
+FN:1204,System.Void Mediator.Mediator::ThrowMissingHandler(System.Object)
+FNDA:0,System.Void Mediator.Mediator::ThrowMissingHandler(System.Object)
+DA:1205,0
+FN:1210,System.Void Mediator.Mediator::ThrowInvalidMessage(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidMessage(T,System.String)
+DA:1211,0
+DA:1212,0
+DA:1213,0
+DA:1214,0
+DA:1215,0
+DA:1217,0
+DA:1218,0
+BRDA:1212,12,0,0
+BRDA:1212,12,1,0
+BRDA:1214,42,0,0
+BRDA:1214,42,1,0
+FN:1223,System.Void Mediator.Mediator::ThrowInvalidRequest(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidRequest(T,System.String)
+DA:1224,0
+DA:1225,0
+DA:1226,0
+DA:1227,0
+DA:1228,0
+DA:1230,0
+DA:1231,0
+BRDA:1225,12,0,0
+BRDA:1225,12,1,0
+BRDA:1227,42,0,0
+BRDA:1227,42,1,0
+FN:1236,System.Void Mediator.Mediator::ThrowInvalidCommand(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidCommand(T,System.String)
+DA:1237,0
+DA:1238,0
+DA:1239,0
+DA:1240,0
+DA:1241,0
+DA:1243,0
+DA:1244,0
+BRDA:1238,12,0,0
+BRDA:1238,12,1,0
+BRDA:1240,42,0,0
+BRDA:1240,42,1,0
+FN:1249,System.Void Mediator.Mediator::ThrowInvalidQuery(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidQuery(T,System.String)
+DA:1250,0
+DA:1251,0
+DA:1252,0
+DA:1253,0
+DA:1254,0
+DA:1256,0
+DA:1257,0
+BRDA:1251,12,0,0
+BRDA:1251,12,1,0
+BRDA:1253,42,0,0
+BRDA:1253,42,1,0
+FN:1262,System.Void Mediator.Mediator::ThrowInvalidStreamMessage(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidStreamMessage(T,System.String)
+DA:1263,0
+DA:1264,0
+DA:1265,0
+DA:1266,0
+DA:1267,0
+DA:1269,0
+DA:1270,0
+BRDA:1264,12,0,0
+BRDA:1264,12,1,0
+BRDA:1266,42,0,0
+BRDA:1266,42,1,0
+FN:1275,System.Void Mediator.Mediator::ThrowInvalidStreamRequest(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidStreamRequest(T,System.String)
+DA:1276,0
+DA:1277,0
+DA:1278,0
+DA:1279,0
+DA:1280,0
+DA:1282,0
+DA:1283,0
+BRDA:1277,12,0,0
+BRDA:1277,12,1,0
+BRDA:1279,42,0,0
+BRDA:1279,42,1,0
+FN:1288,System.Void Mediator.Mediator::ThrowInvalidStreamCommand(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidStreamCommand(T,System.String)
+DA:1289,0
+DA:1290,0
+DA:1291,0
+DA:1292,0
+DA:1293,0
+DA:1295,0
+DA:1296,0
+BRDA:1290,12,0,0
+BRDA:1290,12,1,0
+BRDA:1292,42,0,0
+BRDA:1292,42,1,0
+FN:1301,System.Void Mediator.Mediator::ThrowInvalidStreamQuery(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidStreamQuery(T,System.String)
+DA:1302,0
+DA:1303,0
+DA:1304,0
+DA:1305,0
+DA:1306,0
+DA:1308,0
+DA:1309,0
+BRDA:1303,12,0,0
+BRDA:1303,12,1,0
+BRDA:1305,42,0,0
+BRDA:1305,42,1,0
+FN:1314,System.Void Mediator.Mediator::ThrowArgumentNull(System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowArgumentNull(System.String)
+DA:1315,0
+FN:1320,System.Void Mediator.Mediator::ThrowInvalidMessage(T)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidMessage(T)
+DA:1321,0
+FN:1323,System.Void Mediator.Mediator::ThrowIfNull(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowIfNull(T,System.String)
+DA:1324,0
+DA:1325,0
+DA:1326,0
+DA:1327,0
+BRDA:1325,12,0,0
+BRDA:1325,12,1,0
+FN:1329,System.Void Mediator.Mediator::ThrowInvalidNotification(T,System.String)
+FNDA:0,System.Void Mediator.Mediator::ThrowInvalidNotification(T,System.String)
+DA:1330,0
+DA:1331,0
+DA:1332,0
+DA:1333,0
+DA:1334,0
+DA:1335,0
+BRDA:1331,12,0,0
+BRDA:1331,12,1,0
+BRDA:1333,42,0,0
+BRDA:1333,42,1,0
+FN:1340,System.Void Mediator.Mediator::ThrowAggregateException(System.Collections.Generic.List`1<System.Exception>)
+FNDA:0,System.Void Mediator.Mediator::ThrowAggregateException(System.Collections.Generic.List`1<System.Exception>)
+DA:1341,0
+FN:1343,System.Void Mediator.Mediator::MaybeThrowAggregateException(System.Collections.Generic.List`1<System.Exception>)
+FNDA:0,System.Void Mediator.Mediator::MaybeThrowAggregateException(System.Collections.Generic.List`1<System.Exception>)
+DA:1344,0
+DA:1345,0
+DA:1346,0
+DA:1347,0
+DA:1348,0
+DA:1349,0
+BRDA:1345,7,0,0
+BRDA:1345,7,1,0
+FN:773,System.Void Mediator.Mediator::.ctor(System.IServiceProvider)
+FNDA:0,System.Void Mediator.Mediator::.ctor(System.IServiceProvider)
+DA:774,0
+DA:775,0
+DA:776,0
+DA:777,0
+DA:778,0
+DA:779,0
+DA:780,0
+DA:781,0
+FN:797,T Mediator.Mediator/FastLazyValue`2::get_Value()
+FNDA:0,T Mediator.Mediator/FastLazyValue`2::get_Value()
+DA:798,0
+DA:799,0
+DA:800,0
+DA:802,0
+DA:803,0
+BRDA:799,16,0,0
+BRDA:799,16,1,0
+FN:809,T Mediator.Mediator/FastLazyValue`2::get_ValueSlow()
+FNDA:0,T Mediator.Mediator/FastLazyValue`2::get_ValueSlow()
+DA:810,0
+DA:811,0
+DA:812,0
+DA:816,0
+DA:819,0
+DA:820,0
+DA:821,0
+DA:822,0
+DA:824,0
+DA:825,0
+DA:826,0
+DA:829,0
+DA:830,0
+BRDA:812,25,0,0
+BRDA:812,25,1,0
+BRDA:812,31,3,0
+BRDA:812,31,2,0
+BRDA:820,97,1,0
+BRDA:820,97,0,0
+BRDA:812,31,1,0
+BRDA:812,31,0,0
+FN:833,System.Void Mediator.Mediator/FastLazyValue`2::.ctor(System.Func`2<TArg,T>,TArg)
+FNDA:0,System.Void Mediator.Mediator/FastLazyValue`2::.ctor(System.Func`2<TArg,T>,TArg)
+DA:834,0
+DA:835,0
+DA:836,0
+DA:837,0
+DA:838,0
+DA:839,0
+FN:1105,System.Void Mediator.Mediator/<Send>d__25::MoveNext()
+FNDA:0,System.Void Mediator.Mediator/<Send>d__25::MoveNext()
+DA:1106,0
+DA:1107,0
+DA:1110,0
+DA:1113,0
+DA:1114,0
+DA:1115,0
+DA:1119,0
+DA:1121,0
+DA:1123,0
+DA:1124,0
+DA:1125,0
+DA:1129,0
+DA:1131,0
+DA:1132,0
+DA:1134,0
+DA:1135,0
+DA:1136,0
+DA:1140,0
+DA:1141,0
+DA:1143,0
+BRDA:1107,80,0,0
+BRDA:1107,105,0,0
+BRDA:1107,80,1,0
+BRDA:1107,105,1,0
+BRDA:1119,224,1,0
+BRDA:1119,224,0,0
+BRDA:1107,130,1,0
+BRDA:1129,437,0,0
+BRDA:1129,437,1,0
+BRDA:1129,462,1,0
+BRDA:1129,462,0,0
+BRDA:1107,130,0,0
+FN:913,System.Void Mediator.Mediator/<SendAsync>d__17`1::MoveNext()
+FNDA:0,System.Void Mediator.Mediator/<SendAsync>d__17`1::MoveNext()
+DA:914,0
+DA:915,0
+DA:916,0
+DA:917,0
+FN:973,System.Void Mediator.Mediator/<SendAsync>d__20`1::MoveNext()
+FNDA:0,System.Void Mediator.Mediator/<SendAsync>d__20`1::MoveNext()
+DA:974,0
+DA:975,0
+DA:978,0
+DA:979,0
+DA:980,0
+DA:983,0
+DA:984,0
+DA:985,0
+DA:988,0
+BRDA:975,55,1,0
+BRDA:975,55,0,0
+FN:1053,System.Void Mediator.Mediator/<SendAsync>d__23`1::MoveNext()
+FNDA:0,System.Void Mediator.Mediator/<SendAsync>d__23`1::MoveNext()
+DA:1054,0
+DA:1055,0
+DA:1058,0
+DA:1059,0
+DA:1060,0
+DA:1063,0
+DA:1064,0
+DA:1065,0
+DA:1068,0
+DA:1069,0
+DA:1070,0
+DA:1073,0
+BRDA:1055,66,0,0
+BRDA:1055,66,1,0
+BRDA:1055,91,1,0
+BRDA:1055,91,0,0
+FN:129,Mediator.Internals.RequestHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.RequestHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.RequestHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.RequestHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:161,0
+DA:162,0
+DA:163,0
+BRDA:136,39,0,0
+BRDA:136,39,1,0
+BRDA:153,167,1,0
+BRDA:153,167,0,0
+FN:168,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.RequestHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.RequestHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+FN:177,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.RequestHandlerWrapper`2::Handle(Mediator.IRequest`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.RequestHandlerWrapper`2::Handle(Mediator.IRequest`1<TResponse>,System.Threading.CancellationToken)
+DA:178,0
+DA:179,0
+DA:180,0
+FN:123,System.Void Mediator.Internals.RequestHandlerWrapper`2::.ctor()
+FNDA:0,System.Void Mediator.Internals.RequestHandlerWrapper`2::.ctor()
+DA:124,0
+FN:185,System.Void Mediator.Internals.RequestHandlerWrapper`2/<Handle>d__4::MoveNext()
+FNDA:0,System.Void Mediator.Internals.RequestHandlerWrapper`2/<Handle>d__4::MoveNext()
+DA:186,0
+DA:187,0
+DA:188,0
+FN:209,Mediator.Internals.StreamRequestHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.StreamRequestHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.StreamRequestHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.StreamRequestHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:241,0
+DA:242,0
+DA:243,0
+BRDA:216,39,0,0
+BRDA:216,39,1,0
+BRDA:233,167,1,0
+BRDA:233,167,0,0
+FN:248,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamRequestHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamRequestHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+FN:257,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamRequestHandlerWrapper`2::Handle(Mediator.IStreamRequest`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamRequestHandlerWrapper`2::Handle(Mediator.IStreamRequest`1<TResponse>,System.Threading.CancellationToken)
+DA:258,0
+DA:259,0
+DA:260,0
+FN:203,System.Void Mediator.Internals.StreamRequestHandlerWrapper`2::.ctor()
+FNDA:0,System.Void Mediator.Internals.StreamRequestHandlerWrapper`2::.ctor()
+DA:204,0
+FN:265,System.Void Mediator.Internals.StreamRequestHandlerWrapper`2/<Handle>d__4::MoveNext()
+FNDA:0,System.Void Mediator.Internals.StreamRequestHandlerWrapper`2/<Handle>d__4::MoveNext()
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+BRDA:267,365,1,0
+BRDA:267,365,0,0
+BRDA:267,624,0,0
+BRDA:267,624,1,0
+BRDA:269,720,0,0
+BRDA:269,720,1,0
+FN:290,Mediator.Internals.CommandHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.CommandHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.CommandHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.CommandHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:322,0
+DA:323,0
+DA:324,0
+BRDA:297,39,0,0
+BRDA:297,39,1,0
+BRDA:314,167,1,0
+BRDA:314,167,0,0
+FN:329,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.CommandHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.CommandHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+DA:330,0
+DA:331,0
+DA:332,0
+DA:333,0
+FN:338,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.CommandHandlerWrapper`2::Handle(Mediator.ICommand`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.CommandHandlerWrapper`2::Handle(Mediator.ICommand`1<TResponse>,System.Threading.CancellationToken)
+DA:339,0
+DA:340,0
+DA:341,0
+FN:284,System.Void Mediator.Internals.CommandHandlerWrapper`2::.ctor()
+FNDA:0,System.Void Mediator.Internals.CommandHandlerWrapper`2::.ctor()
+DA:285,0
+FN:346,System.Void Mediator.Internals.CommandHandlerWrapper`2/<Handle>d__4::MoveNext()
+FNDA:0,System.Void Mediator.Internals.CommandHandlerWrapper`2/<Handle>d__4::MoveNext()
+DA:347,0
+DA:348,0
+DA:349,0
+FN:370,Mediator.Internals.StreamCommandHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.StreamCommandHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.StreamCommandHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.StreamCommandHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:371,0
+DA:372,0
+DA:373,0
+DA:374,0
+DA:377,0
+DA:378,0
+DA:379,0
+DA:380,0
+DA:381,0
+DA:382,0
+DA:383,0
+DA:384,0
+DA:385,0
+DA:387,0
+DA:388,0
+DA:389,0
+DA:390,0
+DA:391,0
+DA:392,0
+DA:394,0
+DA:395,0
+DA:396,0
+DA:397,0
+DA:398,0
+DA:399,0
+DA:400,0
+DA:402,0
+DA:403,0
+DA:404,0
+BRDA:377,39,0,0
+BRDA:377,39,1,0
+BRDA:394,167,1,0
+BRDA:394,167,0,0
+FN:409,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamCommandHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamCommandHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+DA:410,0
+DA:411,0
+DA:412,0
+DA:413,0
+FN:418,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamCommandHandlerWrapper`2::Handle(Mediator.IStreamCommand`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamCommandHandlerWrapper`2::Handle(Mediator.IStreamCommand`1<TResponse>,System.Threading.CancellationToken)
+DA:419,0
+DA:420,0
+DA:421,0
+FN:364,System.Void Mediator.Internals.StreamCommandHandlerWrapper`2::.ctor()
+FNDA:0,System.Void Mediator.Internals.StreamCommandHandlerWrapper`2::.ctor()
+DA:365,0
+FN:426,System.Void Mediator.Internals.StreamCommandHandlerWrapper`2/<Handle>d__4::MoveNext()
+FNDA:0,System.Void Mediator.Internals.StreamCommandHandlerWrapper`2/<Handle>d__4::MoveNext()
+DA:427,0
+DA:428,0
+DA:429,0
+DA:430,0
+BRDA:428,365,1,0
+BRDA:428,365,0,0
+BRDA:428,624,0,0
+BRDA:428,624,1,0
+BRDA:430,720,0,0
+BRDA:430,720,1,0
+FN:451,Mediator.Internals.QueryHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.QueryHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.QueryHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.QueryHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:452,0
+DA:453,0
+DA:454,0
+DA:455,0
+DA:458,0
+DA:459,0
+DA:460,0
+DA:461,0
+DA:462,0
+DA:463,0
+DA:464,0
+DA:465,0
+DA:466,0
+DA:468,0
+DA:469,0
+DA:470,0
+DA:471,0
+DA:472,0
+DA:473,0
+DA:475,0
+DA:476,0
+DA:477,0
+DA:478,0
+DA:479,0
+DA:480,0
+DA:481,0
+DA:483,0
+DA:484,0
+DA:485,0
+BRDA:458,39,0,0
+BRDA:458,39,1,0
+BRDA:475,167,1,0
+BRDA:475,167,0,0
+FN:490,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.QueryHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.QueryHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+DA:491,0
+DA:492,0
+DA:493,0
+DA:494,0
+FN:499,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.QueryHandlerWrapper`2::Handle(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask`1<TResponse> Mediator.Internals.QueryHandlerWrapper`2::Handle(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)
+DA:500,0
+DA:501,0
+DA:502,0
+FN:445,System.Void Mediator.Internals.QueryHandlerWrapper`2::.ctor()
+FNDA:0,System.Void Mediator.Internals.QueryHandlerWrapper`2::.ctor()
+DA:446,0
+FN:507,System.Void Mediator.Internals.QueryHandlerWrapper`2/<Handle>d__4::MoveNext()
+FNDA:0,System.Void Mediator.Internals.QueryHandlerWrapper`2/<Handle>d__4::MoveNext()
+DA:508,0
+DA:509,0
+DA:510,0
+FN:531,Mediator.Internals.StreamQueryHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.StreamQueryHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.StreamQueryHandlerWrapper`2<TRequest,TResponse> Mediator.Internals.StreamQueryHandlerWrapper`2::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:532,0
+DA:533,0
+DA:534,0
+DA:535,0
+DA:538,0
+DA:539,0
+DA:540,0
+DA:541,0
+DA:542,0
+DA:543,0
+DA:544,0
+DA:545,0
+DA:546,0
+DA:548,0
+DA:549,0
+DA:550,0
+DA:551,0
+DA:552,0
+DA:553,0
+DA:555,0
+DA:556,0
+DA:557,0
+DA:558,0
+DA:559,0
+DA:560,0
+DA:561,0
+DA:563,0
+DA:564,0
+DA:565,0
+BRDA:538,39,0,0
+BRDA:538,39,1,0
+BRDA:555,167,1,0
+BRDA:555,167,0,0
+FN:570,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamQueryHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamQueryHandlerWrapper`2::Handle(TRequest,System.Threading.CancellationToken)
+DA:571,0
+DA:572,0
+DA:573,0
+DA:574,0
+FN:579,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamQueryHandlerWrapper`2::Handle(Mediator.IStreamQuery`1<TResponse>,System.Threading.CancellationToken)
+FNDA:0,System.Collections.Generic.IAsyncEnumerable`1<TResponse> Mediator.Internals.StreamQueryHandlerWrapper`2::Handle(Mediator.IStreamQuery`1<TResponse>,System.Threading.CancellationToken)
+DA:580,0
+DA:581,0
+DA:582,0
+FN:525,System.Void Mediator.Internals.StreamQueryHandlerWrapper`2::.ctor()
+FNDA:0,System.Void Mediator.Internals.StreamQueryHandlerWrapper`2::.ctor()
+DA:526,0
+FN:587,System.Void Mediator.Internals.StreamQueryHandlerWrapper`2/<Handle>d__4::MoveNext()
+FNDA:0,System.Void Mediator.Internals.StreamQueryHandlerWrapper`2/<Handle>d__4::MoveNext()
+DA:588,0
+DA:589,0
+DA:590,0
+DA:591,0
+BRDA:589,365,1,0
+BRDA:589,365,0,0
+BRDA:589,624,0,0
+BRDA:589,624,1,0
+BRDA:591,720,0,0
+BRDA:591,720,1,0
+FN:606,Mediator.Internals.NotificationHandlerWrapper`1<TNotification> Mediator.Internals.NotificationHandlerWrapper`1::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+FNDA:0,Mediator.Internals.NotificationHandlerWrapper`1<TNotification> Mediator.Internals.NotificationHandlerWrapper`1::Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)
+DA:607,0
+DA:608,0
+DA:609,0
+DA:610,0
+DA:611,0
+DA:612,0
+DA:613,0
+DA:614,0
+DA:615,0
+DA:616,0
+DA:617,0
+DA:618,0
+DA:619,0
+DA:621,0
+DA:622,0
+DA:623,0
+DA:624,0
+DA:625,0
+DA:626,0
+DA:627,0
+DA:628,0
+DA:629,0
+BRDA:610,28,0,0
+BRDA:612,58,0,0
+BRDA:612,58,1,0
+BRDA:610,28,1,0
+BRDA:622,146,0,0
+BRDA:622,146,1,0
+FN:634,System.Threading.Tasks.ValueTask Mediator.Internals.NotificationHandlerWrapper`1::Handle(TNotification,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask Mediator.Internals.NotificationHandlerWrapper`1::Handle(TNotification,System.Threading.CancellationToken)
+DA:635,0
+DA:636,0
+DA:637,0
+DA:638,0
+DA:639,0
+DA:641,0
+DA:642,0
+DA:643,0
+DA:644,0
+DA:645,0
+DA:646,0
+BRDA:637,15,0,0
+BRDA:637,15,1,0
+FN:651,System.Threading.Tasks.ValueTask Mediator.Internals.NotificationHandlerWrapper`1::Handle(System.Object,System.Threading.CancellationToken)
+FNDA:0,System.Threading.Tasks.ValueTask Mediator.Internals.NotificationHandlerWrapper`1::Handle(System.Object,System.Threading.CancellationToken)
+DA:652,0
+DA:653,0
+DA:654,0
+FN:599,System.Void Mediator.Internals.NotificationHandlerWrapper`1::.ctor()
+FNDA:0,System.Void Mediator.Internals.NotificationHandlerWrapper`1::.ctor()
+DA:600,0
+DA:601,0
+FN:684,System.Void Mediator.Internals.ContainerMetadata::.ctor(System.IServiceProvider)
+FNDA:0,System.Void Mediator.Internals.ContainerMetadata::.ctor(System.IServiceProvider)
+DA:685,0
+DA:686,0
+DA:687,0
+DA:689,0
+DA:691,0
+DA:692,0
+DA:693,0
+DA:694,0
+DA:695,0
+DA:696,0
+DA:697,0
+DA:698,0
+DA:699,0
+DA:701,0
+DA:702,0
+DA:703,0
+DA:704,0
+DA:705,0
+DA:706,0
+DA:708,0
+DA:709,0
+DA:711,0
+DA:713,0
+DA:714,0
+DA:715,0
+LF:574
+LH:0
+BRF:140
+BRH:0
+FNF:74
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/obj/Debug/net8.0/Mediator.SourceGenerator/Mediator.SourceGenerator.IncrementalMediatorGenerator/MediatorOptions.g.cs
+FN:16,System.String Mediator.MediatorOptions::get_Namespace()
+FNDA:0,System.String Mediator.MediatorOptions::get_Namespace()
+DA:17,0
+FN:21,System.Boolean Mediator.MediatorOptions::get_GenerateTypesAsInternal()
+FNDA:0,System.Boolean Mediator.MediatorOptions::get_GenerateTypesAsInternal()
+DA:22,0
+FN:27,System.Type Mediator.MediatorOptions::get_NotificationPublisherType()
+FNDA:0,System.Type Mediator.MediatorOptions::get_NotificationPublisherType()
+DA:28,0
+FN:33,Microsoft.Extensions.DependencyInjection.ServiceLifetime Mediator.MediatorOptions::get_ServiceLifetime()
+FNDA:0,Microsoft.Extensions.DependencyInjection.ServiceLifetime Mediator.MediatorOptions::get_ServiceLifetime()
+DA:34,0
+FN:40,System.Collections.Generic.IReadOnlyList`1<Mediator.AssemblyReference> Mediator.MediatorOptions::get_Assemblies()
+FNDA:0,System.Collections.Generic.IReadOnlyList`1<Mediator.AssemblyReference> Mediator.MediatorOptions::get_Assemblies()
+DA:41,0
+FN:46,System.Collections.Generic.IReadOnlyList`1<System.Type> Mediator.MediatorOptions::get_PipelineBehaviors()
+FNDA:0,System.Collections.Generic.IReadOnlyList`1<System.Type> Mediator.MediatorOptions::get_PipelineBehaviors()
+DA:47,0
+FN:52,System.Collections.Generic.IReadOnlyList`1<System.Type> Mediator.MediatorOptions::get_StreamPipelineBehaviors()
+FNDA:0,System.Collections.Generic.IReadOnlyList`1<System.Type> Mediator.MediatorOptions::get_StreamPipelineBehaviors()
+DA:53,0
+FN:34,System.Void Mediator.MediatorOptions::.ctor()
+FNDA:0,System.Void Mediator.MediatorOptions::.ctor()
+DA:35,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/obj/Debug/net8.0/Mediator.SourceGenerator/Mediator.SourceGenerator.IncrementalMediatorGenerator/MediatorOptionsAttribute.g.cs
+FN:17,System.String Mediator.MediatorOptionsAttribute::get_Namespace()
+FNDA:0,System.String Mediator.MediatorOptionsAttribute::get_Namespace()
+DA:18,0
+FN:23,System.Type Mediator.MediatorOptionsAttribute::get_NotificationPublisherType()
+FNDA:0,System.Type Mediator.MediatorOptionsAttribute::get_NotificationPublisherType()
+DA:24,0
+FN:29,Microsoft.Extensions.DependencyInjection.ServiceLifetime Mediator.MediatorOptionsAttribute::get_ServiceLifetime()
+FNDA:0,Microsoft.Extensions.DependencyInjection.ServiceLifetime Mediator.MediatorOptionsAttribute::get_ServiceLifetime()
+DA:30,0
+FN:30,System.Void Mediator.MediatorOptionsAttribute::.ctor()
+FNDA:0,System.Void Mediator.MediatorOptionsAttribute::.ctor()
+DA:31,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/obj/Debug/net8.0/Mediator.SourceGenerator/Mediator.SourceGenerator.IncrementalMediatorGenerator/AssemblyReference.g.cs
+FN:16,System.Reflection.Assembly Mediator.AssemblyReference::get_Assembly()
+FNDA:0,System.Reflection.Assembly Mediator.AssemblyReference::get_Assembly()
+DA:17,0
+FN:28,Mediator.AssemblyReference Mediator.AssemblyReference::op_Implicit(System.Type)
+FNDA:0,Mediator.AssemblyReference Mediator.AssemblyReference::op_Implicit(System.Type)
+DA:29,0
+FN:35,Mediator.AssemblyReference Mediator.AssemblyReference::op_Implicit(System.Reflection.Assembly)
+FNDA:0,Mediator.AssemblyReference Mediator.AssemblyReference::op_Implicit(System.Reflection.Assembly)
+DA:36,0
+FN:18,System.Void Mediator.AssemblyReference::.ctor(System.Reflection.Assembly)
+FNDA:0,System.Void Mediator.AssemblyReference::.ctor(System.Reflection.Assembly)
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Queries/Notes/GetAllNotesQuery.cs
+FN:5,System.Void TuiSecretary.Application.Queries.Notes.GetAllNotesQuery::.ctor()
+FNDA:1,System.Void TuiSecretary.Application.Queries.Notes.GetAllNotesQuery::.ctor()
+DA:6,1
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Queries/Notes/GetNoteByIdQuery.cs
+FN:5,System.Guid TuiSecretary.Application.Queries.Notes.GetNoteByIdQuery::get_Id()
+FNDA:2,System.Guid TuiSecretary.Application.Queries.Notes.GetNoteByIdQuery::get_Id()
+DA:6,2
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Handlers/Notes/CreateNoteHandler.cs
+FN:11,System.Void TuiSecretary.Application.Handlers.Notes.CreateNoteHandler::.ctor(TuiSecretary.Domain.Interfaces.IUnitOfWork)
+FNDA:1,System.Void TuiSecretary.Application.Handlers.Notes.CreateNoteHandler::.ctor(TuiSecretary.Domain.Interfaces.IUnitOfWork)
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+BRDA:14,11,0,0
+BRDA:14,11,1,1
+FN:17,System.Void TuiSecretary.Application.Handlers.Notes.CreateNoteHandler/<Handle>d__2::MoveNext()
+FNDA:1,System.Void TuiSecretary.Application.Handlers.Notes.CreateNoteHandler/<Handle>d__2::MoveNext()
+DA:18,1
+DA:19,1
+DA:21,1
+DA:22,1
+DA:24,1
+DA:25,1
+LF:10
+LH:10
+BRF:2
+BRH:1
+FNF:2
+FNH:2
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Handlers/Notes/GetAllNotesHandler.cs
+FN:11,System.Void TuiSecretary.Application.Handlers.Notes.GetAllNotesHandler::.ctor(TuiSecretary.Domain.Interfaces.IUnitOfWork)
+FNDA:1,System.Void TuiSecretary.Application.Handlers.Notes.GetAllNotesHandler::.ctor(TuiSecretary.Domain.Interfaces.IUnitOfWork)
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+BRDA:14,11,0,0
+BRDA:14,11,1,1
+FN:17,System.Void TuiSecretary.Application.Handlers.Notes.GetAllNotesHandler/<Handle>d__2::MoveNext()
+FNDA:1,System.Void TuiSecretary.Application.Handlers.Notes.GetAllNotesHandler/<Handle>d__2::MoveNext()
+DA:18,1
+DA:19,1
+DA:20,1
+LF:7
+LH:7
+BRF:2
+BRH:1
+FNF:2
+FNH:2
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Handlers/Notes/GetNoteByIdHandler.cs
+FN:11,System.Void TuiSecretary.Application.Handlers.Notes.GetNoteByIdHandler::.ctor(TuiSecretary.Domain.Interfaces.IUnitOfWork)
+FNDA:1,System.Void TuiSecretary.Application.Handlers.Notes.GetNoteByIdHandler::.ctor(TuiSecretary.Domain.Interfaces.IUnitOfWork)
+DA:12,1
+DA:13,1
+DA:14,1
+DA:15,1
+BRDA:14,11,0,0
+BRDA:14,11,1,1
+FN:17,System.Void TuiSecretary.Application.Handlers.Notes.GetNoteByIdHandler/<Handle>d__2::MoveNext()
+FNDA:1,System.Void TuiSecretary.Application.Handlers.Notes.GetNoteByIdHandler/<Handle>d__2::MoveNext()
+DA:18,1
+DA:19,1
+DA:20,1
+LF:7
+LH:7
+BRF:2
+BRH:1
+FNF:2
+FNH:2
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Commands/Notes/CreateNoteCommand.cs
+FN:5,System.String TuiSecretary.Application.Commands.Notes.CreateNoteCommand::get_Title()
+FNDA:4,System.String TuiSecretary.Application.Commands.Notes.CreateNoteCommand::get_Title()
+DA:6,4
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Commands/Notes/DeleteNoteCommand.cs
+FN:4,System.Guid TuiSecretary.Application.Commands.Notes.DeleteNoteCommand::get_Id()
+FNDA:0,System.Guid TuiSecretary.Application.Commands.Notes.DeleteNoteCommand::get_Id()
+DA:5,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/zephy/src/learn/net/ghcp/tuisecretary/src/Application/Commands/Notes/UpdateNoteCommand.cs
+FN:5,System.Guid TuiSecretary.Application.Commands.Notes.UpdateNoteCommand::get_Id()
+FNDA:0,System.Guid TuiSecretary.Application.Commands.Notes.UpdateNoteCommand::get_Id()
+DA:6,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
