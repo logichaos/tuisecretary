@@ -2,7 +2,7 @@ using Xunit;
 using FakeItEasy;
 using Terminal.Gui;
 using TuiSecretary.Presentation.Views;
-using TuiSecretary.Domain.Interfaces;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation.Tests;
 
@@ -12,7 +12,7 @@ public class MainWindowTests
     public void MainWindow_Should_Initialize_With_VIM_Navigation_Keys()
     {
         // Arrange
-        var mockUnitOfWork = A.Fake<IUnitOfWork>();
+        var mockApiClient = A.Fake<ICachedApiClient>();
         
         // Initialize Terminal.Gui for testing
         Terminal.Gui.Application.Init();
@@ -20,7 +20,7 @@ public class MainWindowTests
         try
         {
             // Act
-            var mainWindow = new MainWindow(mockUnitOfWork);
+            var mainWindow = new MainWindow(mockApiClient);
             
             // Assert
             Assert.NotNull(mainWindow);
@@ -37,14 +37,14 @@ public class MainWindowTests
     public void MainWindow_Should_Handle_VIM_Navigation_Keys()
     {
         // Arrange
-        var mockUnitOfWork = A.Fake<IUnitOfWork>();
+        var mockApiClient = A.Fake<ICachedApiClient>();
         
         // Initialize Terminal.Gui for testing  
         Terminal.Gui.Application.Init();
         
         try
         {
-            var mainWindow = new MainWindow(mockUnitOfWork);
+            var mainWindow = new MainWindow(mockApiClient);
             
             // Act - Test that VIM keys are handled
             var keyEventH = new KeyEvent { Key = Key.h };
