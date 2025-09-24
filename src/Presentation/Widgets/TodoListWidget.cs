@@ -1,12 +1,12 @@
 using Terminal.Gui;
-using TuiSecretary.Domain.Interfaces;
 using TuiSecretary.Domain.Entities;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation.Widgets;
 
 public class TodoListWidget : BaseWidget
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ICachedApiClient _apiClient;
     private ListView? _listView;
     private ListView? _itemsView;
     private List<TodoList> _todoLists = new();
@@ -14,9 +14,9 @@ public class TodoListWidget : BaseWidget
 
     public override string Name => "Todo Lists";
 
-    public TodoListWidget(IUnitOfWork unitOfWork)
+    public TodoListWidget(ICachedApiClient apiClient)
     {
-        _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
     }
 
     protected override View CreateWidgetView()
@@ -62,11 +62,13 @@ public class TodoListWidget : BaseWidget
             Y = Pos.Bottom(_listView),
         };
 
-        addListButton.Clicked += async () =>
+        addListButton.Clicked += () =>
         {
-            var todoList = new TodoList("New Todo List", "Description here...");
-            await _unitOfWork.TodoLists.AddAsync(todoList);
-            await RefreshAsync();
+            // TODO: Implement create todo list API endpoint
+            MessageBox.Query("Info", "Creating todo lists via API not yet implemented", "OK");
+            // var todoList = new TodoList("New Todo List", "Description here...");
+            // await _apiClient.CreateTodoListAsync(todoList);
+            // await RefreshAsync();
         };
 
         // Todo items on the right
@@ -123,7 +125,7 @@ public class TodoListWidget : BaseWidget
     {
         try
         {
-            _todoLists = (await _unitOfWork.TodoLists.GetAllAsync()).ToList();
+            _todoLists = (await _apiClient.GetTodoListsAsync()).ToList();
             
             Terminal.Gui.Application.MainLoop.Invoke(() =>
             {

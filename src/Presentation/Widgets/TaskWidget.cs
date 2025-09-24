@@ -1,21 +1,21 @@
 using Terminal.Gui;
-using TuiSecretary.Domain.Interfaces;
 using TuiSecretary.Domain.Entities;
 using TuiSecretary.Domain.Enums;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation.Widgets;
 
 public class TaskWidget : BaseWidget
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ICachedApiClient _apiClient;
     private ListView? _listView;
     private List<WorkTask> _tasks = new();
 
     public override string Name => "Tasks";
 
-    public TaskWidget(IUnitOfWork unitOfWork)
+    public TaskWidget(ICachedApiClient apiClient)
     {
-        _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
     }
 
     protected override View CreateWidgetView()
@@ -58,15 +58,17 @@ public class TaskWidget : BaseWidget
 
         addTaskButton.Clicked += async () =>
         {
-            var task = new WorkTask(
-                "New Task", 
-                "Task description...", 
-                Priority.Medium, 
-                DateTime.Now, 
-                DateTime.Now.AddDays(7)
-            );
-            await _unitOfWork.Tasks.AddAsync(task);
-            await RefreshAsync();
+            // TODO: Implement create task API endpoint
+            MessageBox.Query("Info", "Creating tasks via API not yet implemented", "OK");
+            // var task = new WorkTask(
+            //     "New Task", 
+            //     "Task description...", 
+            //     Priority.Medium, 
+            //     DateTime.Now, 
+            //     DateTime.Now.AddDays(7)
+            // );
+            // await _apiClient.CreateTaskAsync(task);
+            // await RefreshAsync();
         };
 
         startTimerButton.Clicked += async () =>
@@ -78,9 +80,11 @@ public class TaskWidget : BaseWidget
                 try
                 {
                     task.StartTimer();
-                    await _unitOfWork.Tasks.UpdateAsync(task);
-                    await RefreshAsync();
-                    MessageBox.Query("Timer", $"Timer started for task: {task.Title}", "OK");
+                    // TODO: Implement update task API endpoint
+                    MessageBox.Query("Info", "Updating tasks via API not yet implemented", "OK");
+                    // await _apiClient.UpdateTaskAsync(task);
+                    // await RefreshAsync();
+                    // MessageBox.Query("Timer", $"Timer started for task: {task.Title}", "OK");
                 }
                 catch (InvalidOperationException ex)
                 {
@@ -102,9 +106,11 @@ public class TaskWidget : BaseWidget
                 if (task.HasActiveTimer)
                 {
                     task.StopActiveTimer();
-                    await _unitOfWork.Tasks.UpdateAsync(task);
-                    await RefreshAsync();
-                    MessageBox.Query("Timer", $"Timer stopped for task: {task.Title}", "OK");
+                    // TODO: Implement update task API endpoint
+                    MessageBox.Query("Info", "Updating tasks via API not yet implemented", "OK");
+                    // await _apiClient.UpdateTaskAsync(task);
+                    // await RefreshAsync();
+                    // MessageBox.Query("Timer", $"Timer stopped for task: {task.Title}", "OK");
                 }
                 else
                 {
@@ -135,7 +141,7 @@ public class TaskWidget : BaseWidget
     {
         try
         {
-            _tasks = (await _unitOfWork.Tasks.GetAllAsync()).ToList();
+            _tasks = (await _apiClient.GetTasksAsync()).ToList();
             
             Terminal.Gui.Application.MainLoop.Invoke(() =>
             {

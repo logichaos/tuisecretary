@@ -1,12 +1,12 @@
 using Terminal.Gui;
-using TuiSecretary.Domain.Interfaces;
 using TuiSecretary.Domain.Entities;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation.Widgets;
 
 public class CalendarWidget : BaseWidget
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ICachedApiClient _apiClient;
     private Label? _monthYearLabel;
     private List<CalendarEvent> _events = new();
     private DateTime _selectedDate = DateTime.Today;
@@ -21,9 +21,9 @@ public class CalendarWidget : BaseWidget
 
     public override string Name => "Calendar";
 
-    public CalendarWidget(IUnitOfWork unitOfWork)
+    public CalendarWidget(ICachedApiClient apiClient)
     {
-        _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
     }
 
     protected override View CreateWidgetView()
@@ -95,11 +95,13 @@ public class CalendarWidget : BaseWidget
 
         addEventButton.Clicked += async () =>
         {
-            var startDateTime = _selectedDate.Date.Add(new TimeSpan(9, 0, 0)); // 9 AM
-            var endDateTime = startDateTime.AddHours(1); // 1 hour duration
-            var calendarEvent = new CalendarEvent("New Event", startDateTime, endDateTime);
-            await _unitOfWork.CalendarEvents.AddAsync(calendarEvent);
-            await RefreshAsync();
+            // TODO: Implement create calendar event API endpoint
+            MessageBox.Query("Info", "Creating calendar events via API not yet implemented", "OK");
+            // var startDateTime = _selectedDate.Date.Add(new TimeSpan(9, 0, 0)); // 9 AM
+            // var endDateTime = startDateTime.AddHours(1); // 1 hour duration
+            // var calendarEvent = new CalendarEvent("New Event", startDateTime, endDateTime);
+            // await _apiClient.CreateCalendarEventAsync(calendarEvent);
+            // await RefreshAsync();
         };
 
         view.Add(_monthYearLabel, prevMonthButton, nextMonthButton, todayButton, addEventButton);
@@ -346,12 +348,14 @@ public class CalendarWidget : BaseWidget
 
         addButton.Clicked += async () =>
         {
-            var startDateTime = _selectedDate.Date.Add(new TimeSpan(9, 0, 0)); // 9 AM
-            var endDateTime = startDateTime.AddHours(1); // 1 hour duration
-            var calendarEvent = new CalendarEvent("New Event", startDateTime, endDateTime);
-            await _unitOfWork.CalendarEvents.AddAsync(calendarEvent);
-            await RefreshAsync();
+            // TODO: Implement create calendar event API endpoint
+            MessageBox.Query("Info", "Creating calendar events via API not yet implemented", "OK");
             Terminal.Gui.Application.RequestStop(popup);
+            // var startDateTime = _selectedDate.Date.Add(new TimeSpan(9, 0, 0)); // 9 AM
+            // var endDateTime = startDateTime.AddHours(1); // 1 hour duration
+            // var calendarEvent = new CalendarEvent("New Event", startDateTime, endDateTime);
+            // await _apiClient.CreateCalendarEventAsync(calendarEvent);
+            // await RefreshAsync();
         };
 
         closeButton.Clicked += () =>
@@ -388,7 +392,7 @@ public class CalendarWidget : BaseWidget
     {
         try
         {
-            _events = (await _unitOfWork.CalendarEvents.GetAllAsync()).ToList();
+            _events = (await _apiClient.GetCalendarEventsAsync()).ToList();
             UpdateCalendarDisplay();
         }
         catch (Exception ex)

@@ -14,14 +14,15 @@ A cross-platform Terminal User Interface (TUI) application for managing calendar
 
 ## Architecture
 
-The application follows **Clean Architecture** and **Domain-Driven Design** principles:
+The application follows **Clean Architecture** and **Domain-Driven Design** principles with a **client-server architecture**:
 
 ```
 ├── src/
 │   ├── Domain/           # Core business logic and entities
 │   ├── Application/      # CQRS commands/queries with Mediator pattern
 │   ├── Infrastructure/   # External concerns (persistence, services)
-│   └── Presentation/     # Terminal.Gui TUI application
+│   ├── ApiServer/        # REST API server hosting application logic
+│   └── Presentation/     # Terminal.Gui TUI client application
 └── tests/
     ├── Domain.Tests/     # Domain layer unit tests
     ├── Application.Tests/# Application layer unit tests (using FakeItEasy)
@@ -29,10 +30,19 @@ The application follows **Clean Architecture** and **Domain-Driven Design** prin
     └── Presentation.Tests/   # Presentation layer unit tests
 ```
 
+### Client-Server Separation
+
+The application is split into two independent processes:
+
+1. **API Server** (`TuiSecretary.ApiServer`): Contains all business logic and exposes REST API endpoints
+2. **TUI Client** (`TuiSecretary.Presentation`): Terminal UI that communicates with the server via HTTP
+
 ### Key Technologies
 
 - **.NET 8.0** - Modern C# runtime and SDK
-- **Terminal.Gui v1.16.0** - Cross-platform TUI framework
+- **ASP.NET Core** - Web API framework for the server component
+- **Terminal.Gui v1.16.0** - Cross-platform TUI framework for the client
+- **HttpClient** - HTTP communication between client and server
 - **Mediator Pattern** - CQRS implementation with martinothamar's Mediator
 - **FakeItEasy** - Mocking framework for comprehensive unit testing
 - **xUnit** - Testing framework
@@ -58,10 +68,39 @@ dotnet build
 
 # Run tests
 dotnet test
-
-# Run the application
-dotnet run --project src/Presentation/
 ```
+
+### Running the Application (Client-Server)
+
+The application now uses a client-server architecture. You need to start both components:
+
+**Option 1: Using startup scripts**
+```bash
+# Terminal 1: Start the API server
+./start-server.sh
+
+# Terminal 2: Start the TUI client
+./start-client.sh
+```
+
+**Option 2: Manual startup**
+```bash
+# Terminal 1: Start the API server
+dotnet run --project src/ApiServer/TuiSecretary.ApiServer.csproj --urls "http://localhost:5000"
+
+# Terminal 2: Start the TUI client  
+dotnet run --project src/Presentation/TuiSecretary.Presentation.csproj
+```
+
+The API server will be available at `http://localhost:5000` with Swagger documentation at `http://localhost:5000/swagger`.
+
+### API Endpoints
+
+- `GET /api/notes` - List all notes
+- `POST /api/notes` - Create a new note
+- `GET /api/tasks` - List all tasks
+- `GET /api/calendar/events` - List all calendar events
+- `GET /api/todolists` - List all todo lists
 
 ## Usage
 
@@ -167,10 +206,15 @@ dotnet test tests/Domain.Tests/
 - `Persistence/`: In-memory repository implementations
 - `Services/`: External service integrations (future)
 
+### API Server (`src/ApiServer/`)
+- REST API endpoints using ASP.NET Core Minimal APIs
+- Hosts application logic and domain services
+- Provides Swagger documentation for API exploration
+
 ### Presentation Layer (`src/Presentation/`)
 - `Views/`: Main application windows
 - `Widgets/`: Reusable UI components for each domain area
-- `Services/`: UI-specific services
+- `Services/`: HTTP client services for API communication with local caching
 
 ## Configuration and Extensibility
 

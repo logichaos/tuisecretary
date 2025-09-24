@@ -1,20 +1,20 @@
 using Terminal.Gui;
-using TuiSecretary.Domain.Interfaces;
 using TuiSecretary.Domain.Entities;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation.Widgets;
 
 public class NotesWidget : BaseWidget
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ICachedApiClient _apiClient;
     private ListView? _listView;
     private List<Note> _notes = new();
 
     public override string Name => "Notes";
 
-    public NotesWidget(IUnitOfWork unitOfWork)
+    public NotesWidget(ICachedApiClient apiClient)
     {
-        _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
     }
 
     protected override View CreateWidgetView()
@@ -45,9 +45,15 @@ public class NotesWidget : BaseWidget
 
         addButton.Clicked += async () =>
         {
-            var note = new Note("New Note", "Enter your note content here...");
-            await _unitOfWork.Notes.AddAsync(note);
-            await RefreshAsync();
+            try
+            {
+                await _apiClient.CreateNoteAsync("New Note", "Enter your note content here...", new List<string>());
+                await RefreshAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.ErrorQuery("Error", $"Failed to create note: {ex.Message}", "OK");
+            }
         };
 
         view.Add(_listView, addButton);
@@ -68,7 +74,7 @@ public class NotesWidget : BaseWidget
     {
         try
         {
-            _notes = (await _unitOfWork.Notes.GetAllAsync()).ToList();
+            _notes = (await _apiClient.GetNotesAsync()).ToList();
             
             Terminal.Gui.Application.MainLoop.Invoke(() =>
             {
