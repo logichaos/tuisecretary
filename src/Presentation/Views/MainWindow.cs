@@ -212,16 +212,100 @@ public class MainWindow : Window
     {
         // Get the currently focused view
         var focused = Terminal.Gui.Application.Top.MostFocused;
-        if (focused != null)
+        if (focused == null) return;
+
+        // Find the widget container that contains the focused view
+        var widgetContainer = FindWidgetContainer(focused);
+        if (widgetContainer == null) return;
+
+        // For h,j,k,l navigation, we want to move focus between elements within the widget
+        // Similar to how Tab/Shift+Tab works, but using directional logic
+        switch (arrowKey)
         {
-            // Create a new key event with the corresponding arrow key
-            var keyEvent = new KeyEvent()
+            case Key.CursorLeft: // h key
+            case Key.CursorUp:   // k key
+                // Move focus to previous focusable element (like Shift+Tab)
+                MoveFocusWithinWidget(widgetContainer, reverse: true);
+                break;
+            case Key.CursorRight: // l key  
+            case Key.CursorDown:  // j key
+                // Move focus to next focusable element (like Tab)
+                MoveFocusWithinWidget(widgetContainer, reverse: false);
+                break;
+        }
+    }
+
+    private View? FindWidgetContainer(View focused)
+    {
+        // Walk up the view hierarchy to find the widget's root FrameView
+        var current = focused;
+        while (current != null)
+        {
+            // Widget containers are typically FrameView instances that are direct children of the main layout
+            if (current is FrameView frameView && current.SuperView != null)
             {
-                Key = arrowKey
-            };
-            
-            // Send the arrow key event to the focused view
-            focused.ProcessKey(keyEvent);
+                // Check if this FrameView is a widget container (has a border title)
+                if (!string.IsNullOrEmpty(frameView.Border?.Title?.ToString()))
+                {
+                    return frameView;
+                }
+            }
+            current = current.SuperView;
+        }
+        return null;
+    }
+
+    private void MoveFocusWithinWidget(View widgetContainer, bool reverse)
+    {
+        // Get all focusable views within the widget container
+        var focusableViews = GetFocusableViews(widgetContainer);
+        if (focusableViews.Count <= 1) return;
+
+        // Find the currently focused view in the list
+        var currentFocused = Terminal.Gui.Application.Top.MostFocused;
+        var currentIndex = focusableViews.IndexOf(currentFocused);
+        
+        if (currentIndex == -1) 
+        {
+            // If current focused view is not in the list, focus the first one
+            focusableViews[0].SetFocus();
+            return;
+        }
+
+        // Calculate next index
+        int nextIndex;
+        if (reverse)
+        {
+            nextIndex = currentIndex == 0 ? focusableViews.Count - 1 : currentIndex - 1;
+        }
+        else
+        {
+            nextIndex = currentIndex == focusableViews.Count - 1 ? 0 : currentIndex + 1;
+        }
+
+        // Set focus to the next view
+        focusableViews[nextIndex].SetFocus();
+    }
+
+    private List<View> GetFocusableViews(View container)
+    {
+        var focusableViews = new List<View>();
+        CollectFocusableViews(container, focusableViews);
+        return focusableViews;
+    }
+
+    private void CollectFocusableViews(View view, List<View> focusableViews)
+    {
+        // Add this view if it can be focused (and is not the container itself)
+        if (view.CanFocus && view.Visible && view.Enabled)
+        {
+            focusableViews.Add(view);
+        }
+
+        // Recursively check subviews
+        foreach (View subview in view.Subviews)
+        {
+            CollectFocusableViews(subview, focusableViews);
         }
     }
 
