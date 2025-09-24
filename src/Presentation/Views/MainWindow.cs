@@ -187,8 +187,42 @@ public class MainWindow : Window
                     Terminal.Gui.Application.RequestStop();
                     e.Handled = true;
                     break;
+                // VIM navigation keys for within-widget navigation
+                case Key.h:
+                    HandleVimNavigation(Key.CursorLeft);
+                    e.Handled = true;
+                    break;
+                case Key.j:
+                    HandleVimNavigation(Key.CursorDown);
+                    e.Handled = true;
+                    break;
+                case Key.k:
+                    HandleVimNavigation(Key.CursorUp);
+                    e.Handled = true;
+                    break;
+                case Key.l:
+                    HandleVimNavigation(Key.CursorRight);
+                    e.Handled = true;
+                    break;
             }
         };
+    }
+
+    private void HandleVimNavigation(Key arrowKey)
+    {
+        // Get the currently focused view
+        var focused = Terminal.Gui.Application.Top.MostFocused;
+        if (focused != null)
+        {
+            // Create a new key event with the corresponding arrow key
+            var keyEvent = new KeyEvent()
+            {
+                Key = arrowKey
+            };
+            
+            // Send the arrow key event to the focused view
+            focused.ProcessKey(keyEvent);
+        }
     }
 
     private void RefreshAllWidgets()
@@ -223,7 +257,9 @@ Layout:
 
 Navigation:
 Tab         - Move between widgets
+Shift+Tab   - Move between widgets (reverse)
 Arrow Keys  - Navigate within widgets
+h,j,k,l     - VIM-style navigation within widgets (left,down,up,right)
 Enter       - Select/Action
 Esc         - Cancel/Back
 
