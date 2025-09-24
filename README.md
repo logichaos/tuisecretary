@@ -81,6 +81,9 @@ The application displays a 2x2 grid layout with four widgets:
 - **Ctrl+T** - Toggle split orientation (for 2-widget layout)
 - **Ctrl+Q** - Quit application
 - **Tab** - Navigate between widgets
+- **Shift+Tab** - Navigate between widgets (reverse)
+- **Arrow Keys** - Navigate within widgets
+- **h,j,k,l** - VIM-style navigation within widgets (left, down, up, right)
 - **Enter** - Select/Activate
 - **Esc** - Cancel/Back
 
