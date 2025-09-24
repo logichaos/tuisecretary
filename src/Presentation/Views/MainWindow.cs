@@ -1,19 +1,19 @@
 using Terminal.Gui;
 using TuiSecretary.Presentation.Widgets;
-using TuiSecretary.Domain.Interfaces;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation.Views;
 
 public class MainWindow : Window
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ICachedApiClient _apiClient;
     private readonly List<IWidget> _widgets = new();
     private View? _currentLayout;
     private bool _isVerticalSplit = true;
 
-    public MainWindow(IUnitOfWork unitOfWork) : base("TUI Secretary")
+    public MainWindow(ICachedApiClient apiClient) : base("TUI Secretary")
     {
-        _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
         
         X = 0;
         Y = 1; // Leave room for menu
@@ -28,10 +28,10 @@ public class MainWindow : Window
     private void InitializeWidgets()
     {
         // Create all available widgets
-        _widgets.Add(new NotesWidget(_unitOfWork));
-        _widgets.Add(new CalendarWidget(_unitOfWork));
-        _widgets.Add(new TodoListWidget(_unitOfWork));
-        _widgets.Add(new TaskWidget(_unitOfWork));
+        _widgets.Add(new NotesWidget(_apiClient));
+        _widgets.Add(new CalendarWidget(_apiClient));
+        _widgets.Add(new TodoListWidget(_apiClient));
+        _widgets.Add(new TaskWidget(_apiClient));
         
         // Initialize widgets
         foreach (var widget in _widgets)

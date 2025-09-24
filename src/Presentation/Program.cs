@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Terminal.Gui;
-using TuiSecretary.Domain.Interfaces;
-using TuiSecretary.Infrastructure.Persistence;
 using TuiSecretary.Presentation.Views;
+using TuiSecretary.Presentation.Services;
 
 namespace TuiSecretary.Presentation;
 
@@ -21,7 +20,7 @@ class Program
         {
             // Create main window with dependencies
             using var scope = host.Services.CreateScope();
-            var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
+            var apiClient = scope.ServiceProvider.GetRequiredService<ICachedApiClient>();
             
             // Create menu bar
             var menu = new MenuBar(new MenuBarItem[]
@@ -32,17 +31,26 @@ class Program
                 }),
                 new MenuBarItem("_View", new MenuItem[]
                 {
-                    new MenuItem("_Refresh", "", () => Terminal.Gui.Application.Top.SetNeedsDisplay()),
+                    new MenuItem("_Refresh", "", () => 
+                    {
+                        _ = Task.Run(() => apiClient.RefreshAllAsync());
+                        Terminal.Gui.Application.Top.SetNeedsDisplay();
+                    }),
+                    new MenuItem("_Clear Cache", "", () => 
+                    {
+                        apiClient.ClearCache();
+                        Terminal.Gui.Application.Top.SetNeedsDisplay();
+                    }),
                     new MenuItem("Toggle _Split", "", () => { /* TODO: Implement */ })
                 }),
                 new MenuBarItem("_Help", new MenuItem[]
                 {
                     new MenuItem("_About", "", () => 
-                        MessageBox.Query("About", "TUI Secretary v1.0\nA cross-platform terminal UI for productivity", "OK"))
+                        MessageBox.Query("About", "TUI Secretary v1.0\nA cross-platform terminal UI for productivity\n\nNow with client-server architecture!", "OK"))
                 })
             });
 
-            var mainWindow = new MainWindow(unitOfWork);
+            var mainWindow = new MainWindow(apiClient);
             
             // Create top-level application
             var top = Terminal.Gui.Application.Top;
@@ -65,10 +73,17 @@ class Program
         Host.CreateDefaultBuilder(args)
             .ConfigureServices((context, services) =>
             {
-                // Register dependencies
-                services.AddSingleton<IUnitOfWork, InMemoryUnitOfWork>();
+                // Configure HttpClient for API communication
+                services.AddHttpClient<IApiClient, ApiClient>(client =>
+                {
+                    client.BaseAddress = new Uri("http://localhost:5000");
+                    client.Timeout = TimeSpan.FromSeconds(30);
+                });
+
+                // Register the cached API client
+                services.AddScoped<ICachedApiClient, CachedApiClient>();
                 
-                // TODO: Add Mediator configuration
-                // services.AddMediator();
+                // Keep the old registration for backwards compatibility during transition
+                // services.AddSingleton<IUnitOfWork, InMemoryUnitOfWork>();
             });
 }
