@@ -1,4 +1,4 @@
-./TestResults/39713d00-1a80-4310-9fe1-2eee1abc2dd2/coverage.cobertura.xml
-./TestResults/7edacc47-2e44-4bdd-8198-3db4d6196d93/coverage.cobertura.xml
-./TestResults/2f3c015e-8176-4d71-982f-2dd0549d9070/coverage.cobertura.xml
-./TestResults/708257d3-0354-4776-973c-6b5b62b75b70/coverage.cobertura.xml
+./TestResults/00bb4fc3-d250-421a-8e86-3ad446e4e8fc/coverage.cobertura.xml
+./TestResults/a6ab1a34-57cb-4c67-a694-5f8977518247/coverage.cobertura.xml
+./TestResults/b3aa670e-1d87-437a-bf6a-24bdcae4c873/coverage.cobertura.xml
+./TestResults/659f812a-f568-4dbe-ae69-aeec9214e5fb/coverage.cobertura.xml

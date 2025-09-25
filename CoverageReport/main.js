@@ -252,19 +252,6 @@ var assemblies = [
       { "name": "TuiSecretary.Infrastructure.Persistence.InMemoryRepository<T>", "rp": "TuiSecretary.Infrastructure_InMemoryRepository_1.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 44, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Infrastructure.Persistence.InMemoryUnitOfWork", "rp": "TuiSecretary.Infrastructure_InMemoryUnitOfWork.html", "cl": 13, "ucl": 9, "cal": 22, "tl": 46, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
-  {
-    "name": "TuiSecretary.Presentation",
-    "classes": [
-      { "name": "TuiSecretary.Presentation.Program", "rp": "TuiSecretary.Presentation_Program.html", "cl": 0, "ucl": 61, "cal": 61, "tl": 89, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Services.ApiClient", "rp": "TuiSecretary.Presentation_ApiClient.html", "cl": 0, "ucl": 68, "cal": 68, "tl": 112, "cb": 0, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Services.CachedApiClient", "rp": "TuiSecretary.Presentation_CachedApiClient.html", "cl": 0, "ucl": 70, "cal": 70, "tl": 106, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Views.MainWindow", "rp": "TuiSecretary.Presentation_MainWindow.html", "cl": 95, "ucl": 175, "cal": 270, "tl": 372, "cb": 16, "tb": 69, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Widgets.BaseWidget", "rp": "TuiSecretary.Presentation_BaseWidget.html", "cl": 15, "ucl": 6, "cal": 21, "tl": 43, "cb": 4, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Widgets.CalendarWidget", "rp": "TuiSecretary.Presentation_CalendarWidget.html", "cl": 185, "ucl": 113, "cal": 298, "tl": 406, "cb": 31, "tb": 51, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Widgets.NotesWidget", "rp": "TuiSecretary.Presentation_NotesWidget.html", "cl": 44, "ucl": 24, "cal": 68, "tl": 95, "cb": 1, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Widgets.TaskWidget", "rp": "TuiSecretary.Presentation_TaskWidget.html", "cl": 79, "ucl": 58, "cal": 137, "tl": 169, "cb": 1, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Presentation.Widgets.TodoListWidget", "rp": "TuiSecretary.Presentation_TodoListWidget.html", "cl": 76, "ucl": 46, "cal": 122, "tl": 161, "cb": 1, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-    ]},
 ];
 
 var metrics = [{ "name": "Crap Score", "abbreviation": "crp", "explanationUrl": "https://googletesting.blogspot.de/2011/02/this-code-is-crap.html" }, { "name": "Cyclomatic complexity", "abbreviation": "cc", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" }, { "name": "Line coverage", "abbreviation": "cov", "explanationUrl": "https://en.wikipedia.org/wiki/Code_coverage" }, { "name": "Branch coverage", "abbreviation": "bcov", "explanationUrl": "https://en.wikipedia.org/wiki/Code_coverage" }];
@@ -284,30 +271,6 @@ var riskHotspots = [
       { "value": 12, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Views.MainWindow", "reportPath": "TuiSecretary.Presentation_MainWindow.html", "methodName": "FindWidgetContainer(Terminal.Gui.View)", "methodShortName": "FindWidgetContainer(...)", "fileIndex": 0, "line": 239,
-    "metrics": [
-      { "value": 156, "exceeded": true },
-      { "value": 12, "exceeded": false },
-    ]},
-  {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Views.MainWindow", "reportPath": "TuiSecretary.Presentation_MainWindow.html", "methodName": "MoveFocusWithinWidget(Terminal.Gui.View,System.Boolean)", "methodShortName": "MoveFocusWithinWidget(...)", "fileIndex": 0, "line": 259,
-    "metrics": [
-      { "value": 110, "exceeded": true },
-      { "value": 10, "exceeded": false },
-    ]},
-  {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Views.MainWindow", "reportPath": "TuiSecretary.Presentation_MainWindow.html", "methodName": "HandleVimNavigation(Terminal.Gui.Key)", "methodShortName": "HandleVimNavigation(...)", "fileIndex": 0, "line": 212,
-    "metrics": [
-      { "value": 90, "exceeded": true },
-      { "value": 9, "exceeded": false },
-    ]},
-  {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Widgets.CalendarWidget", "reportPath": "TuiSecretary.Presentation_CalendarWidget.html", "methodName": "HandleCalendarKeyPress(Terminal.Gui.View/KeyEventEventArgs)", "methodShortName": "HandleCalendarKeyPress(...)", "fileIndex": 0, "line": 265,
-    "metrics": [
-      { "value": 90, "exceeded": true },
-      { "value": 9, "exceeded": false },
-    ]},
-  {
     "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "Send(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)", "methodShortName": "Send(...)", "fileIndex": 0, "line": 1021,
     "metrics": [
       { "value": 72, "exceeded": true },
@@ -315,12 +278,6 @@ var riskHotspots = [
     ]},
   {
     "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "get_ValueSlow()", "methodShortName": "get_ValueSlow()", "fileIndex": 0, "line": 810,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Views.MainWindow", "reportPath": "TuiSecretary.Presentation_MainWindow.html", "methodName": "CollectFocusableViews(Terminal.Gui.View,System.Collections.Generic.List`1<Terminal.Gui.View>)", "methodShortName": "CollectFocusableViews(...)", "fileIndex": 0, "line": 298,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
@@ -354,18 +311,6 @@ var riskHotspots = [
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Views.MainWindow", "reportPath": "TuiSecretary.Presentation_MainWindow.html", "methodName": "Dispose(System.Boolean)", "methodShortName": "Dispose(...)", "fileIndex": 0, "line": 360,
-    "metrics": [
-      { "value": 42, "exceeded": true },
-      { "value": 6, "exceeded": false },
-    ]},
-  {
-    "assembly": "TuiSecretary.Presentation", "class": "TuiSecretary.Presentation.Widgets.CalendarWidget", "reportPath": "TuiSecretary.Presentation_CalendarWidget.html", "methodName": "UpdateCalendarDisplay()", "methodShortName": "UpdateCalendarDisplay()", "fileIndex": 0, "line": 184,
-    "metrics": [
-      { "value": 22, "exceeded": false },
-      { "value": 22, "exceeded": true },
     ]},
 ];
 
