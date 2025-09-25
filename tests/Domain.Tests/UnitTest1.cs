@@ -4,7 +4,7 @@ using Xunit;
 
 namespace TuiSecretary.Domain.Tests;
 
-public class NoteTests
+public class ComprehensiveNoteTests
 {
     [Fact]
     public void Note_Constructor_SetsPropertiesCorrectly()
@@ -27,6 +27,23 @@ public class NoteTests
     }
 
     [Fact]
+    public void Note_Constructor_WithNullTags_CreatesEmptyTagsList()
+    {
+        // Act
+        var note = new Note("Title", "Content", null);
+
+        // Assert
+        Assert.Empty(note.Tags);
+    }
+
+    [Fact]
+    public void Note_Constructor_WithNullTitle_ThrowsArgumentNullException()
+    {
+        // Act & Assert
+        Assert.Throws<ArgumentNullException>(() => new Note(null!, "Content"));
+    }
+
+    [Fact]
     public void Note_UpdateTitle_UpdatesTimestamp()
     {
         // Arrange
@@ -44,6 +61,46 @@ public class NoteTests
     }
 
     [Fact]
+    public void UpdateTitle_WithNullTitle_ThrowsArgumentNullException()
+    {
+        // Arrange
+        var note = new Note("Title", "Content");
+
+        // Act & Assert
+        Assert.Throws<ArgumentNullException>(() => note.UpdateTitle(null!));
+    }
+
+    [Fact]
+    public void UpdateContent_UpdatesContentAndTimestamp()
+    {
+        // Arrange
+        var note = new Note("Title", "Original Content");
+        var originalCreatedAt = note.CreatedAt;
+        Thread.Sleep(10);
+
+        // Act
+        note.UpdateContent("New Content");
+
+        // Assert
+        Assert.Equal("New Content", note.Content);
+        Assert.NotNull(note.UpdatedAt);
+        Assert.True(note.UpdatedAt > originalCreatedAt);
+    }
+
+    [Fact]
+    public void UpdateContent_WithNull_SetsEmptyString()
+    {
+        // Arrange
+        var note = new Note("Title", "Content");
+
+        // Act
+        note.UpdateContent(null!);
+
+        // Assert
+        Assert.Equal(string.Empty, note.Content);
+    }
+
+    [Fact]
     public void Note_AddTag_AddsUniqueTagsOnly()
     {
         // Arrange
@@ -53,10 +110,61 @@ public class NoteTests
         note.AddTag("tag1");
         note.AddTag("tag2");
         note.AddTag("tag1"); // Duplicate
+        note.AddTag(""); // Empty
+        note.AddTag("   "); // Whitespace
 
         // Assert
         Assert.Equal(2, note.Tags.Count);
         Assert.Contains("tag1", note.Tags);
         Assert.Contains("tag2", note.Tags);
+    }
+
+    [Fact]
+    public void RemoveTag_RemovesExistingTag()
+    {
+        // Arrange
+        var note = new Note("Title", "Content", new List<string> { "tag1", "tag2" });
+
+        // Act
+        note.RemoveTag("tag1");
+
+        // Assert
+        Assert.Single(note.Tags);
+        Assert.Contains("tag2", note.Tags);
+        Assert.DoesNotContain("tag1", note.Tags);
+    }
+
+    [Fact]
+    public void RemoveTag_NonExistentTag_DoesNothing()
+    {
+        // Arrange
+        var note = new Note("Title", "Content", new List<string> { "tag1" });
+
+        // Act
+        note.RemoveTag("nonexistent");
+
+        // Assert
+        Assert.Single(note.Tags);
+        Assert.Contains("tag1", note.Tags);
+    }
+
+    [Fact]
+    public void ToggleFavorite_TogglesFavoriteStatus()
+    {
+        // Arrange
+        var note = new Note("Title", "Content");
+        Assert.False(note.IsFavorite);
+
+        // Act
+        note.ToggleFavorite();
+
+        // Assert
+        Assert.True(note.IsFavorite);
+
+        // Act again
+        note.ToggleFavorite();
+
+        // Assert
+        Assert.False(note.IsFavorite);
     }
 }
