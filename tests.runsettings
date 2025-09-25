@@ -8,6 +8,13 @@
       <DataCollector friendlyName="XPlat code coverage">
         <Configuration>
           <Format>cobertura</Format>
+          <ExcludeByFile>**/Presentation/**/*.cs</ExcludeByFile>
+          <ExcludeByAttribute>ExcludeFromCodeCoverage</ExcludeByAttribute>
+          <ExcludeByAttribute>CompilerGenerated</ExcludeByAttribute>
+          <ExcludeByAttribute>GeneratedCode</ExcludeByAttribute>
+          <ExcludeByFile>**/Generated/**/*.cs</ExcludeByFile>
+          <ExcludeByFile>**/*Designer.cs</ExcludeByFile>
+          <ExcludeByFile>**/Migrations/*.cs</ExcludeByFile>
         </Configuration>
       </DataCollector>
     </DataCollectors>
