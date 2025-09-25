@@ -11,7 +11,7 @@ namespace TuiSecretary.Application.Tests;
 public class ExtendedNotesHandlerTests
 {
     [Fact]
-    public async System.Threading.Tasks.Task CreateNoteHandler_Should_HandleNullTagsList()
+    public async Task CreateNoteHandler_Should_HandleNullTagsList()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -41,7 +41,7 @@ public class ExtendedNotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task CreateNoteHandler_Should_HandleEmptyContent()
+    public async Task CreateNoteHandler_Should_HandleEmptyContent()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -70,7 +70,7 @@ public class ExtendedNotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task CreateNoteHandler_Should_HandleTagsList()
+    public async Task CreateNoteHandler_Should_HandleTagsList()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -103,7 +103,7 @@ public class ExtendedNotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task GetNoteByIdHandler_Should_ReturnNull_WhenNotExists()
+    public async Task GetNoteByIdHandler_Should_ReturnNull_WhenNotExists()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -128,7 +128,7 @@ public class ExtendedNotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task GetAllNotesHandler_Should_ReturnEmptyList_WhenNoNotes()
+    public async Task GetAllNotesHandler_Should_ReturnEmptyList_WhenNoNotes()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -154,7 +154,7 @@ public class ExtendedNotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task GetAllNotesHandler_Should_ReturnMultipleNotes()
+    public async Task GetAllNotesHandler_Should_ReturnMultipleNotes()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -190,7 +190,7 @@ public class ExtendedNotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task CreateNoteHandler_Should_HandleCancellationToken()
+    public async Task CreateNoteHandler_Should_HandleCancellationToken()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();

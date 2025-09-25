@@ -214,26 +214,38 @@ var assemblies = [
     "name": "TuiSecretary.Application",
     "classes": [
       { "name": "Mediator.AssemblyReference", "rp": "TuiSecretary.Application_AssemblyReference.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 37, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.CommandHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_CommandHandlerWrapper_2.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 350, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.ContainerMetadata", "rp": "TuiSecretary.Application_ContainerMetadata.html", "cl": 0, "ucl": 25, "cal": 25, "tl": 716, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.NotificationHandlerWrapper<T>", "rp": "TuiSecretary.Application_NotificationHandlerWrapper_1.html", "cl": 0, "ucl": 38, "cal": 38, "tl": 655, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.QueryHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_QueryHandlerWrapper_2.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 511, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.RequestHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_RequestHandlerWrapper_2.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 189, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.StreamCommandHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_StreamCommandHandlerWrapper_2.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 431, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.StreamQueryHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_StreamQueryHandlerWrapper_2.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 592, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Internals.StreamRequestHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_StreamRequestHandlerWrapper_2.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 270, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Mediator.Mediator", "rp": "TuiSecretary.Application_Mediator.html", "cl": 0, "ucl": 233, "cal": 233, "tl": 1350, "cb": 0, "tb": 84, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.CommandHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_CommandHandlerWrapper_2.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 371, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.ContainerMetadata", "rp": "TuiSecretary.Application_ContainerMetadata.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 758, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.NotificationHandlerWrapper<T>", "rp": "TuiSecretary.Application_NotificationHandlerWrapper_1.html", "cl": 0, "ucl": 38, "cal": 38, "tl": 676, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.QueryHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_QueryHandlerWrapper_2.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 532, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.RequestHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_RequestHandlerWrapper_2.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 210, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.StreamCommandHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_StreamCommandHandlerWrapper_2.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 452, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.StreamQueryHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_StreamQueryHandlerWrapper_2.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 613, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Internals.StreamRequestHandlerWrapper<T1, T2>", "rp": "TuiSecretary.Application_StreamRequestHandlerWrapper_2.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 291, "cb": 0, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Mediator.Mediator", "rp": "TuiSecretary.Application_Mediator.html", "cl": 0, "ucl": 331, "cal": 331, "tl": 1609, "cb": 0, "tb": 140, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Mediator.MediatorOptions", "rp": "TuiSecretary.Application_MediatorOptions.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Mediator.MediatorOptionsAttribute", "rp": "TuiSecretary.Application_MediatorOptionsAttribute.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Microsoft.Extensions.DependencyInjection.MediatorDependencyInjectionExtensions", "rp": "TuiSecretary.Application_MediatorDependencyInjectionExtensions.html", "cl": 0, "ucl": 35, "cal": 35, "tl": 80, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Microsoft.Extensions.DependencyInjection.MediatorDependencyInjectionExtensions", "rp": "TuiSecretary.Application_MediatorDependencyInjectionExtensions.html", "cl": 0, "ucl": 56, "cal": 56, "tl": 101, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Application.Commands.Notes.CreateNoteCommand", "rp": "TuiSecretary.Application_CreateNoteCommand.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Application.Commands.Notes.DeleteNoteCommand", "rp": "TuiSecretary.Application_DeleteNoteCommand.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 5, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Application.Commands.Notes.UpdateNoteCommand", "rp": "TuiSecretary.Application_UpdateNoteCommand.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Commands.Notes.DeleteNoteCommand", "rp": "TuiSecretary.Application_DeleteNoteCommand.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 5, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Commands.Notes.UpdateNoteCommand", "rp": "TuiSecretary.Application_UpdateNoteCommand.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Commands.Tasks.CreateTaskCommand", "rp": "TuiSecretary.Application_CreateTaskCommand.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Commands.Tasks.DeleteTaskCommand", "rp": "TuiSecretary.Application_DeleteTaskCommand.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 5, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Commands.Tasks.UpdateTaskCommand", "rp": "TuiSecretary.Application_UpdateTaskCommand.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Application.Handlers.Notes.CreateNoteHandler", "rp": "TuiSecretary.Application_CreateNoteHandler.html", "cl": 10, "ucl": 0, "cal": 10, "tl": 26, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Notes.DeleteNoteHandler", "rp": "TuiSecretary.Application_DeleteNoteHandler.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 30, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Application.Handlers.Notes.GetAllNotesHandler", "rp": "TuiSecretary.Application_GetAllNotesHandler.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 21, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Application.Handlers.Notes.GetNoteByIdHandler", "rp": "TuiSecretary.Application_GetNoteByIdHandler.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 21, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Notes.UpdateNoteHandler", "rp": "TuiSecretary.Application_UpdateNoteHandler.html", "cl": 31, "ucl": 0, "cal": 31, "tl": 54, "cb": 12, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Tasks.CreateTaskHandler", "rp": "TuiSecretary.Application_CreateTaskHandler.html", "cl": 16, "ucl": 0, "cal": 16, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Tasks.DeleteTaskHandler", "rp": "TuiSecretary.Application_DeleteTaskHandler.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 30, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Tasks.GetAllTasksHandler", "rp": "TuiSecretary.Application_GetAllTasksHandler.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Tasks.GetTaskByIdHandler", "rp": "TuiSecretary.Application_GetTaskByIdHandler.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Handlers.Tasks.UpdateTaskHandler", "rp": "TuiSecretary.Application_UpdateTaskHandler.html", "cl": 23, "ucl": 9, "cal": 32, "tl": 55, "cb": 10, "tb": 14, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Application.Queries.Notes.GetAllNotesQuery", "rp": "TuiSecretary.Application_GetAllNotesQuery.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Application.Queries.Notes.GetNoteByIdQuery", "rp": "TuiSecretary.Application_GetNoteByIdQuery.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Queries.Tasks.GetAllTasksQuery", "rp": "TuiSecretary.Application_GetAllTasksQuery.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Application.Queries.Tasks.GetTaskByIdQuery", "rp": "TuiSecretary.Application_GetTaskByIdQuery.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 6, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "TuiSecretary.Domain",
@@ -244,7 +256,7 @@ var assemblies = [
       { "name": "TuiSecretary.Domain.Entities.TaskTimer", "rp": "TuiSecretary.Domain_TaskTimer.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 37, "cb": 7, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Domain.Entities.TodoItem", "rp": "TuiSecretary.Domain_TodoItem.html", "cl": 46, "ucl": 1, "cal": 47, "tl": 78, "cb": 16, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TuiSecretary.Domain.Entities.TodoList", "rp": "TuiSecretary.Domain_TodoList.html", "cl": 40, "ucl": 1, "cal": 41, "tl": 67, "cb": 14, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TuiSecretary.Domain.Entities.WorkTask", "rp": "TuiSecretary.Domain_WorkTask.html", "cl": 77, "ucl": 20, "cal": 97, "tl": 148, "cb": 23, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TuiSecretary.Domain.Entities.WorkTask", "rp": "TuiSecretary.Domain_WorkTask.html", "cl": 81, "ucl": 16, "cal": 97, "tl": 148, "cb": 25, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "TuiSecretary.Infrastructure",
@@ -265,43 +277,61 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "Send()", "methodShortName": "Send()", "fileIndex": 0, "line": 1106,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "Send()", "methodShortName": "Send()", "fileIndex": 0, "line": 1358,
+    "metrics": [
+      { "value": 702, "exceeded": true },
+      { "value": 26, "exceeded": true },
+    ]},
+  {
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "Send(Mediator.ICommand`1<TResponse>,System.Threading.CancellationToken)", "methodShortName": "Send(...)", "fileIndex": 0, "line": 1104,
+    "metrics": [
+      { "value": 600, "exceeded": true },
+      { "value": 24, "exceeded": true },
+    ]},
+  {
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "Send(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)", "methodShortName": "Send(...)", "fileIndex": 0, "line": 1245,
+    "metrics": [
+      { "value": 272, "exceeded": true },
+      { "value": 16, "exceeded": true },
+    ]},
+  {
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "SendAsync()", "methodShortName": "SendAsync()", "fileIndex": 0, "line": 1173,
     "metrics": [
       { "value": 156, "exceeded": true },
       { "value": 12, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "Send(Mediator.IQuery`1<TResponse>,System.Threading.CancellationToken)", "methodShortName": "Send(...)", "fileIndex": 0, "line": 1021,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "get_ValueSlow()", "methodShortName": "get_ValueSlow()", "fileIndex": 0, "line": 852,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "get_ValueSlow()", "methodShortName": "get_ValueSlow()", "fileIndex": 0, "line": 810,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Mediator", "reportPath": "TuiSecretary.Application_Mediator.html", "methodName": "SendAsync()", "methodShortName": "SendAsync()", "fileIndex": 0, "line": 1296,
     "metrics": [
       { "value": 72, "exceeded": true },
       { "value": 8, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.NotificationHandlerWrapper<T>", "reportPath": "TuiSecretary.Application_NotificationHandlerWrapper_1.html", "methodName": "Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)", "methodShortName": "Init(...)", "fileIndex": 0, "line": 607,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.NotificationHandlerWrapper<T>", "reportPath": "TuiSecretary.Application_NotificationHandlerWrapper_1.html", "methodName": "Init(Mediator.Internals.ContainerMetadata,System.IServiceProvider)", "methodShortName": "Init(...)", "fileIndex": 0, "line": 628,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.StreamCommandHandlerWrapper<T1, T2>", "reportPath": "TuiSecretary.Application_StreamCommandHandlerWrapper_2.html", "methodName": "Handle()", "methodShortName": "Handle()", "fileIndex": 0, "line": 427,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.StreamCommandHandlerWrapper<T1, T2>", "reportPath": "TuiSecretary.Application_StreamCommandHandlerWrapper_2.html", "methodName": "Handle()", "methodShortName": "Handle()", "fileIndex": 0, "line": 448,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.StreamQueryHandlerWrapper<T1, T2>", "reportPath": "TuiSecretary.Application_StreamQueryHandlerWrapper_2.html", "methodName": "Handle()", "methodShortName": "Handle()", "fileIndex": 0, "line": 588,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.StreamQueryHandlerWrapper<T1, T2>", "reportPath": "TuiSecretary.Application_StreamQueryHandlerWrapper_2.html", "methodName": "Handle()", "methodShortName": "Handle()", "fileIndex": 0, "line": 609,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.StreamRequestHandlerWrapper<T1, T2>", "reportPath": "TuiSecretary.Application_StreamRequestHandlerWrapper_2.html", "methodName": "Handle()", "methodShortName": "Handle()", "fileIndex": 0, "line": 266,
+    "assembly": "TuiSecretary.Application", "class": "Mediator.Internals.StreamRequestHandlerWrapper<T1, T2>", "reportPath": "TuiSecretary.Application_StreamRequestHandlerWrapper_2.html", "methodName": "Handle()", "methodShortName": "Handle()", "fileIndex": 0, "line": 287,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
