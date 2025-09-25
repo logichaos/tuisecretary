@@ -1,0 +1,111 @@
+name: 'Run Tests with Coverage'
+description: 'Runs all tests and collects code coverage information'
+
+outputs:
+  coverage-percentage:
+    description: 'Overall code coverage percentage'
+    value: ${{ steps.coverage.outputs.coverage-percentage }}
+  test-results:
+    description: 'Test execution results'
+    value: ${{ steps.test.outputs.test-results }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install ReportGenerator tool
+      shell: bash
+      run: |
+        dotnet tool install -g dotnet-reportgenerator-globaltool || echo "ReportGenerator already installed"
+
+    - name: Run tests with coverage collection
+      id: test
+      shell: bash
+      run: |
+        echo "Running tests with coverage collection..."
+        
+        # Run tests and collect coverage
+        dotnet test --collect:"XPlat Code Coverage" --results-directory ./TestResults --verbosity normal > test_output.log 2>&1
+        
+        TEST_EXIT_CODE=$?
+        
+        # Display test output
+        cat test_output.log
+        
+        if [ $TEST_EXIT_CODE -ne 0 ]; then
+          echo "❌ Tests failed with exit code $TEST_EXIT_CODE"
+          echo "test-results=FAILED" >> $GITHUB_OUTPUT
+          exit $TEST_EXIT_CODE
+        else
+          echo "✅ All tests passed"
+          echo "test-results=PASSED" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Generate coverage report and extract percentage
+      id: coverage
+      shell: bash
+      run: |
+        echo "Generating coverage report..."
+        
+        # Find all coverage files
+        find ./TestResults -name "coverage.cobertura.xml" -type f > coverage_files.txt
+        
+        if [ ! -s coverage_files.txt ]; then
+          echo "❌ No coverage files found"
+          exit 1
+        fi
+        
+        echo "Found coverage files:"
+        cat coverage_files.txt
+        
+        # Generate HTML report and summary
+        reportgenerator "-reports:$(cat coverage_files.txt | tr '\n' ';' | sed 's/;$//')" \
+                        "-targetdir:./CoverageReport" \
+                        "-reporttypes:Html;Cobertura" \
+                        "-verbosity:Info"
+        
+        # Extract overall coverage percentage from the generated Cobertura report
+        if [ -f "./CoverageReport/Cobertura.xml" ]; then
+          COVERAGE_PERCENTAGE=$(python3 -c "
+import xml.etree.ElementTree as ET
+import sys
+try:
+    tree = ET.parse('./CoverageReport/Cobertura.xml')
+    root = tree.getroot()
+    line_rate = float(root.get('line-rate', 0))
+    percentage = round(line_rate * 100, 2)
+    print(f'{percentage}')
+except Exception as e:
+    print('0', file=sys.stderr)
+    sys.exit(1)
+")
+        else
+          echo "❌ Could not find generated Cobertura.xml file"
+          exit 1
+        fi
+        
+        echo "📊 Overall coverage: ${COVERAGE_PERCENTAGE}%"
+        echo "coverage-percentage=${COVERAGE_PERCENTAGE}" >> $GITHUB_OUTPUT
+        
+        # Create a summary comment
+        echo "## 📋 Test Results" >> $GITHUB_STEP_SUMMARY
+        echo "✅ All tests passed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "## 📊 Code Coverage" >> $GITHUB_STEP_SUMMARY
+        echo "**Overall Coverage:** ${COVERAGE_PERCENTAGE}%" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Coverage report has been generated and saved as artifacts." >> $GITHUB_STEP_SUMMARY
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: ./CoverageReport/
+        retention-days: 30
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: ./TestResults/
+        retention-days: 30
