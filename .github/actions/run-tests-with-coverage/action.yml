@@ -31,7 +31,6 @@ runs:
         echo "Running tests with coverage collection..."
         
         # Run tests and collect coverage
-        export DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_REDIRECTION=true
         dotnet test --collect:"XPlat Code Coverage" --results-directory ./TestResults --verbosity normal 2>&1 | tee test_output.log
         
         TEST_EXIT_CODE=$?
