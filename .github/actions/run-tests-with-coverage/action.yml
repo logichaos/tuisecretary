@@ -12,6 +12,13 @@ outputs:
 runs:
   using: 'composite'
   steps:
+    - name: Prepare terminal env
+      shell: bash
+      run: |
+        echo "Setting TERM for headless environment"
+        echo "TERM=xterm-256color" >> $GITHUB_ENV
+        echo "CI=true" >> $GITHUB_ENV
+
     - name: Install ReportGenerator tool
       shell: bash
       run: |
