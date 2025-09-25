@@ -65,19 +65,19 @@ runs:
         
         # Extract overall coverage percentage from the generated Cobertura report
         if [ -f "./CoverageReport/Cobertura.xml" ]; then
-          COVERAGE_PERCENTAGE=$(python3 -c "
-import xml.etree.ElementTree as ET
-import sys
-try:
-    tree = ET.parse('./CoverageReport/Cobertura.xml')
-    root = tree.getroot()
-    line_rate = float(root.get('line-rate', 0))
-    percentage = round(line_rate * 100, 2)
-    print(f'{percentage}')
-except Exception as e:
-    print('0', file=sys.stderr)
-    sys.exit(1)
-")
+          echo "import xml.etree.ElementTree as ET" > extract_coverage.py
+          echo "import sys" >> extract_coverage.py
+          echo "try:" >> extract_coverage.py
+          echo "    tree = ET.parse('./CoverageReport/Cobertura.xml')" >> extract_coverage.py
+          echo "    root = tree.getroot()" >> extract_coverage.py
+          echo "    line_rate = float(root.get('line-rate', 0))" >> extract_coverage.py
+          echo "    percentage = round(line_rate * 100, 2)" >> extract_coverage.py
+          echo "    print(f'{percentage}')" >> extract_coverage.py
+          echo "except Exception as e:" >> extract_coverage.py
+          echo "    print('0', file=sys.stderr)" >> extract_coverage.py
+          echo "    sys.exit(1)" >> extract_coverage.py
+          COVERAGE_PERCENTAGE=$(python3 extract_coverage.py)
+          rm extract_coverage.py
         else
           echo "❌ Could not find generated Cobertura.xml file"
           exit 1

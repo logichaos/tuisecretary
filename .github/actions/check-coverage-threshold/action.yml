@@ -24,17 +24,17 @@ runs:
         echo "Required threshold: ${THRESHOLD}%"
         
         # Use python to do floating point comparison
-        MEETS_THRESHOLD=$(python3 -c "
-import sys
-try:
-    coverage = float('${COVERAGE}')
-    threshold = float('${THRESHOLD}')
-    meets = coverage >= threshold
-    print('true' if meets else 'false')
-except ValueError:
-    print('false')
-    sys.exit(1)
-")
+        echo "import sys" > check_threshold.py
+        echo "try:" >> check_threshold.py
+        echo "    coverage = float(sys.argv[1])" >> check_threshold.py
+        echo "    threshold = float(sys.argv[2])" >> check_threshold.py
+        echo "    meets = coverage >= threshold" >> check_threshold.py
+        echo "    print('true' if meets else 'false')" >> check_threshold.py
+        echo "except ValueError:" >> check_threshold.py
+        echo "    print('false')" >> check_threshold.py
+        echo "    sys.exit(1)" >> check_threshold.py
+        MEETS_THRESHOLD=$(python3 check_threshold.py "${COVERAGE}" "${THRESHOLD}")
+        rm check_threshold.py
         
         if [ "$MEETS_THRESHOLD" = "true" ]; then
           echo "✅ Coverage check passed! Coverage of ${COVERAGE}% meets the required threshold of ${THRESHOLD}%"
