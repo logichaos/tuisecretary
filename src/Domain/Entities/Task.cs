@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using TuiSecretary.Domain.Enums;
 
 namespace TuiSecretary.Domain.Entities;
@@ -31,6 +32,7 @@ public class WorkTask : BaseEntity
     private readonly List<TaskTimer> _timers = new();
     public IReadOnlyList<TaskTimer> Timers => _timers.AsReadOnly();
     
+    [ExcludeFromCodeCoverage]
     private WorkTask() { } // For EF Core
     
     public WorkTask(string title, string description = "", Priority priority = Priority.Medium, 
