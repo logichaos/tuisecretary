@@ -1,0 +1,58 @@
+name: 'Check Coverage Threshold'
+description: 'Checks if code coverage meets the minimum threshold requirement'
+
+inputs:
+  coverage-percentage:
+    description: 'The code coverage percentage to check'
+    required: true
+  threshold:
+    description: 'Minimum coverage threshold percentage'
+    required: true
+    default: '70'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Check coverage threshold
+      shell: bash
+      run: |
+        COVERAGE=${{ inputs.coverage-percentage }}
+        THRESHOLD=${{ inputs.threshold }}
+        
+        echo "🔍 Checking coverage threshold..."
+        echo "Current coverage: ${COVERAGE}%"
+        echo "Required threshold: ${THRESHOLD}%"
+        
+        # Use python to do floating point comparison
+        echo "import sys" > check_threshold.py
+        echo "try:" >> check_threshold.py
+        echo "    coverage = float(sys.argv[1])" >> check_threshold.py
+        echo "    threshold = float(sys.argv[2])" >> check_threshold.py
+        echo "    meets = coverage >= threshold" >> check_threshold.py
+        echo "    print('true' if meets else 'false')" >> check_threshold.py
+        echo "except ValueError:" >> check_threshold.py
+        echo "    print('false')" >> check_threshold.py
+        echo "    sys.exit(1)" >> check_threshold.py
+        MEETS_THRESHOLD=$(python3 check_threshold.py "${COVERAGE}" "${THRESHOLD}")
+        rm check_threshold.py
+        
+        if [ "$MEETS_THRESHOLD" = "true" ]; then
+          echo "✅ Coverage check passed! Coverage of ${COVERAGE}% meets the required threshold of ${THRESHOLD}%"
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ Coverage Threshold Check" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** PASSED" >> $GITHUB_STEP_SUMMARY
+          echo "**Current Coverage:** ${COVERAGE}%" >> $GITHUB_STEP_SUMMARY
+          echo "**Required Threshold:** ${THRESHOLD}%" >> $GITHUB_STEP_SUMMARY
+          echo "**Result:** Coverage meets the minimum requirement! 🎉" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ Coverage check failed! Coverage of ${COVERAGE}% is below the required threshold of ${THRESHOLD}%"
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ❌ Coverage Threshold Check" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** FAILED" >> $GITHUB_STEP_SUMMARY
+          echo "**Current Coverage:** ${COVERAGE}%" >> $GITHUB_STEP_SUMMARY
+          echo "**Required Threshold:** ${THRESHOLD}%" >> $GITHUB_STEP_SUMMARY
+          echo "**Result:** Coverage is below the minimum requirement!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Please increase test coverage to at least ${THRESHOLD}% before merging this pull request." >> $GITHUB_STEP_SUMMARY
+          exit 1
+        fi

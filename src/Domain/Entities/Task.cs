@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using TuiSecretary.Domain.Enums;
 
 namespace TuiSecretary.Domain.Entities;
@@ -31,6 +32,7 @@ public class WorkTask : BaseEntity
     private readonly List<TaskTimer> _timers = new();
     public IReadOnlyList<TaskTimer> Timers => _timers.AsReadOnly();
     
+    [ExcludeFromCodeCoverage]
     private WorkTask() { } // For EF Core
     
     public WorkTask(string title, string description = "", Priority priority = Priority.Medium, 
@@ -142,7 +144,11 @@ public class WorkTask : BaseEntity
         ActualDuration = TimeSpan.FromTicks(_timers.Sum(t => t.Duration.Ticks));
     }
     
-    public bool IsOverdue => DueDate.HasValue && DueDate.Value.Date < DateTime.UtcNow.Date && Status != Enums.TaskStatus.Completed;
+    public bool IsOverdue =>
+        DueDate.HasValue
+        && DueDate.Value.Date < DateTime.UtcNow.Date
+        && Status != Enums.TaskStatus.Completed
+        && Status != Enums.TaskStatus.Cancelled;
     
     public bool HasActiveTimer => _timers.Any(t => !t.EndTime.HasValue);
 }

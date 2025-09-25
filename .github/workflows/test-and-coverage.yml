@@ -1,0 +1,33 @@
+name: Test and Coverage Check
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  test-and-coverage:
+    runs-on: ubuntu-latest
+    name: Run Tests and Check Coverage
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Run tests and collect coverage
+      id: test
+      uses: ./.github/actions/run-tests-with-coverage
+
+    - name: Check coverage threshold
+      uses: ./.github/actions/check-coverage-threshold
+      with:
+        coverage-percentage: ${{ steps.test.outputs.coverage-percentage }}
+        threshold: 70

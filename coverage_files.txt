@@ -1,0 +1,4 @@
+./TestResults/502f3908-ccc5-411d-ad84-e34046a0451d/coverage.cobertura.xml
+./TestResults/65b6167f-3c0e-4753-9e36-d8524ca9c487/coverage.cobertura.xml
+./TestResults/70b091fc-a618-4177-8290-d7c4c456e1f7/coverage.cobertura.xml
+./TestResults/4241feb9-b713-4eb5-b3e4-d848b4bdff73/coverage.cobertura.xml

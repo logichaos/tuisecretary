@@ -11,7 +11,7 @@ namespace TuiSecretary.Application.Tests;
 public class NotesHandlerTests
 {
     [Fact]
-    public async System.Threading.Tasks.Task CreateNoteHandler_Should_CreateNote_And_SaveChanges()
+    public async Task CreateNoteHandler_Should_CreateNote_And_SaveChanges()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -41,7 +41,7 @@ public class NotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task GetNoteByIdHandler_Should_ReturnNote_WhenExists()
+    public async Task GetNoteByIdHandler_Should_ReturnNote_WhenExists()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
@@ -69,7 +69,7 @@ public class NotesHandlerTests
     }
 
     [Fact]
-    public async System.Threading.Tasks.Task GetAllNotesHandler_Should_ReturnAllNotes()
+    public async Task GetAllNotesHandler_Should_ReturnAllNotes()
     {
         // Arrange
         var unitOfWork = A.Fake<IUnitOfWork>();
