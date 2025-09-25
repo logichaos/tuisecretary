@@ -144,7 +144,11 @@ public class WorkTask : BaseEntity
         ActualDuration = TimeSpan.FromTicks(_timers.Sum(t => t.Duration.Ticks));
     }
     
-    public bool IsOverdue => DueDate.HasValue && DueDate.Value.Date < DateTime.UtcNow.Date && Status != Enums.TaskStatus.Completed;
+    public bool IsOverdue =>
+        DueDate.HasValue
+        && DueDate.Value.Date < DateTime.UtcNow.Date
+        && Status != Enums.TaskStatus.Completed
+        && Status != Enums.TaskStatus.Cancelled;
     
     public bool HasActiveTimer => _timers.Any(t => !t.EndTime.HasValue);
 }
