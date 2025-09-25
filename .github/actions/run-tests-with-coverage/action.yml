@@ -63,9 +63,28 @@ runs:
         
         echo "Found coverage files:"
         cat coverage_files.txt
-        
+
+        # Build a semicolon-separated list of coverage files, skipping any empty lines
+        REPORTS=""
+        while IFS= read -r coverage_file; do
+          if [ -z "${coverage_file}" ]; then
+            continue
+          fi
+
+          if [ -z "${REPORTS}" ]; then
+            REPORTS="${coverage_file}"
+          else
+            REPORTS="${REPORTS};${coverage_file}"
+          fi
+        done < coverage_files.txt
+
+        if [ -z "${REPORTS}" ]; then
+          echo "❌ No valid coverage file entries found"
+          exit 1
+        fi
+
         # Generate HTML report and summary, excluding Presentation project
-        reportgenerator "-reports:$(cat coverage_files.txt | tr '\n' ';' | sed 's/;$//')" \
+        reportgenerator "-reports:${REPORTS}" \
                         "-targetdir:./CoverageReport" \
                         "-reporttypes:Html;Cobertura" \
                         "-assemblyfilters:-TuiSecretary.Presentation" \
