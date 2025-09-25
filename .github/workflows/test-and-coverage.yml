@@ -22,9 +22,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build solution
-      run: dotnet build --no-restore
-
     - name: Run tests and collect coverage
       id: test
       uses: ./.github/actions/run-tests-with-coverage
